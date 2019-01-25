@@ -252,4 +252,12 @@ session.close();
   	}
   }
   ```
+
 11. **session.close()** 
+
+    
+
+### 2.MyBatis框架
+
+
+
