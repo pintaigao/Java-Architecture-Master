@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaikeba.dao.EmpMapper">
+ 
+  <resultMap type="employee" id="empMap">
+    <constructor>
+     <arg column="hireDate"  javaType="java.util.Date"/>
+    </constructor>
+  </resultMap>
+ 
+ 
+ <!-- 
+         ResultSet =query();
+         while(ResultSet.next){
+            Employee emp=  employee.class.newInstance();
+            Field fieldArray[]=employee.class.getDeclaredFields();
+            for(i=0;i<fieldArray.length;i++){
+                  Field fieldObj = fieldArray[i];
+                  String fieldName= fieldObj.getName();
+                  String value=ResultSet.getString(fieldName);
+                  Class fieldType= fieldObj.getType();
+                  if(Integer.class == fieldType){
+                   fieldObj.set(emp,Integer.valueOf(value));//之前类型转换
+                  }else if(Boolean.class == fieldType){
+                  
+                     fieldObj.set(emp,Boolean.valueOf(value));
+                  }
+                  
+                 column :d_name = dName
+                 
+                 Dept类： dName
+            }
+         }
+         
+ 
+  -->
+   <select id="empFind"  resultType="emploee">
+      select * from emp2
+   </select>
+   
+   
+</mapper>
+

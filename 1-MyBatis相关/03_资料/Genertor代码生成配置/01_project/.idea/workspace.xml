@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91a3221a-555b-492e-832e-4a2d50aa5593" name="Default Changelist" comment="" />
+    <list default="true" id="91a3221a-555b-492e-832e-4a2d50aa5593" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../MyBatis-BaseKnowledge-Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MyBatis-BaseKnowledge-Code/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +44,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1112" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="746" />
     <option name="y" value="23" />
     <option name="width" value="1448" />
-    <option name="height" value="986" />
+    <option name="height" value="957" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -102,16 +104,15 @@
       <option name="presentableId" value="Default" />
       <updated>1548283812890</updated>
       <workItem from="1548283815650" duration="220000" />
-      <workItem from="1548305794761" duration="1324000" />
+      <workItem from="1548305794761" duration="1327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1544000" />
+    <option name="totallyTimeSpent" value="1547000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1112" y="23" width="1448" height="986" extended-state="1" />
-    <editor active="true" />
+    <frame x="746" y="23" width="1448" height="957" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4509246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

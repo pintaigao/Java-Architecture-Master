@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaikeba.dao.DeptMapper">
+ 
+  <!-- 
+        if标签根据判断条件是否为真，来决定if标签包含的
+                 内容是否能够出现在当前的SQL语句 
+  
+   -->
+   
+   <select id="dept_1" resultType="dept">
+            SELECT * FROM dept
+            WHERE 1=1
+            <!-- 如果参数对象deptno属性不等于null并且不等于0 -->
+            <if test="deptNo!=null and deptNo!=0">
+                 and  deptno = #{deptNo} 
+            </if>
+            <if test="dname!=null and dname !=''">
+                and dname like '%' #{dname} '%'
+            </if>
+             <if test="loc!=null and loc !=''">
+                and loc= #{loc}
+            </if>
+            
+   
+   </select>
+   
+   <!-- 
+          1.如果where标签内部所有的判断都不成立。在查询语句中是不会出现where
+                         或则只出现 where1=1
+          2.where标签中，将第一个满足条件的语句中前部包含【and  ,or】自动取消
+    -->
+   
+    <select id="dept_2" resultType="dept">
+            SELECT * FROM dept
+             <where>
+            <!-- 如果参数对象deptno属性不等于null并且不等于0 -->
+            <if test="deptNo!=null and deptNo!=0">
+                 and  deptno = #{deptNo} 
+            </if>
+            <if test="dname!=null and dname !=''">
+                and dname like '%' #{dname} '%'
+            </if>
+             <if test="loc!=null and loc !=''">
+                and loc= #{loc}
+            </if>
+            </where>
+   
+   </select>
+   
+   
+   <!-- 
+        set标签一般用在更新语句，动态指定需要更新字段信息
+        set标签往往需要与if标签
+        set标签自动将最后一个更新字段后面“，”取消
+    -->
+    
+    <update id="deptUpdate">
+    
+         <!--  update dept
+          set dname=#{dname}, loc=#{loc}
+          where deptno =#{deptNo};  -->
+          
+          update dept
+          <set>
+              <if test="dname!=null and dname!=''">
+                    dname = #{dname},
+              </if>
+              <if test="loc!=null and loc!=''">
+                    loc = #{loc}
+              </if>
+          </set>
+          where  deptno = #{deptNo}
+                
+            
+               
+    </update>
+    
+    <!-- 
+    
+        trim标签 自定义第一个满足条件前部的代替内容
+                                也可以自定义最后一个满足条件后面的代替内容
+     -->
+    
+    <select id="dept_3" resultType="dept">
+              select * from dept
+              where 
+              <trim prefixOverrides="and | or" prefix=" 1=1 and" suffixOverrides="," suffix="">
+                 <if test="deptNo!=null and deptNo!=0">
+                    and  deptno = #{deptNo}
+              </if>
+              
+              <if test="dname !=null and dname!=''">
+                   and dname=#{dname}
+              </if>
+              
+              <if test="loc !=null and loc !=''">
+                 and loc=#{loc}  ,
+              </if>
+              
+              </trim>
+    </select>
+    
+   
+</mapper>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaikeba.dao.DeptMapper">
+ 
+
+   <insert id="deptSave">
+    
+      insert into dept
+      values(#{deptNo},#{dname},#{loc},#{flag})
+   </insert>
+
+  <resultMap type="dept" id="deptMap">
+    <result column="flag" property="flag" typeHandler="com.kaikeba.util.MyTypeHandler"/>
+  </resultMap>   
+   <select id="deptFind" resultType="Dept">
+        select * from dept
+   </select>
+   
+</mapper>
+
