@@ -238,5 +238,18 @@ session.close();
    **insert 完**。
 
 10. 完成session.insert(…)后，sql语句已经和parameter相结合并封装到Statement对象中，等待输送到数据库，最后在其内部执行**connection.commit()**，进行提交，数据库执行，至于这个commit是具体怎么工作的，那就很深奥了
-
+   ```java
+   session.commit();
+   
+   public void commit(boolean force) {
+   	try {
+   		this.executor.commit(this.isCommitOrRollbackRequired(force));
+   		this.dirty = false;
+   	} catch (Exception var6) {
+   		throw ExceptionFactory.wrapException("Error committing transaction.  Cause: " + var6, var6);
+   	} finally {
+   		ErrorContext.instance().reset();
+   	}
+   }
+   ```
 11. **session.close()** 
