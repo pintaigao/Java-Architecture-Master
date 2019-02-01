@@ -9,6 +9,7 @@
         <package name="com.kaikeba.beans" />
     </typeAliases>
 
+    <!--P.s:在resultMap中指定了typeHandler的话，以下这条是可以忽略的-->
     <typeHandlers>
         <typeHandler handler="com.kaikeba.util.MyTypeHandler" javaType="Boolean"
             jdbcType="NUMERIC" />
