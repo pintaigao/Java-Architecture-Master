@@ -259,7 +259,6 @@ session.close();
 
 ### 2.MyBatis 动态Sql
 
+1. MyBatis 整体对象的框架
 
-
-
-
+   

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaikeba.dao.DeptMapper">
+ 
+ 
+ <resultMap type="dept" id="deptMap">
+    <id column="dept_deptno" property="deptNo"/>
+    <result column="dname" property="dname"/>
+    <result column="loc"   property="loc"/>
+    <!-- 
+         collection标签中 column属性应该填写查询临时表中来自于一方表主键
+         字段名
+     -->
+   <collection property="empList"
+               ofType="employee"
+               select="empFindByDeptno"
+               column="dept_deptno" 
+   ></collection>
+ </resultMap>
+ 
+ <!-- 根据部门编号查询部门中职员信息 -->
+ <select id="empFindByDeptno" resultType="employee">
+      select empno,ename,job    from emp where deptno=#{deptno}
+ </select>
+ 
+ <!-- 根据部门编号查询部门信息 -->
+ <select id="deptFindByDeptNo" resultMap="deptMap">
+ 
+       select deptno dept_deptno,dname,loc from dept where deptno=#{deptno}
+ </select>
+ 
+ 
+ 
+ 
+ 
+ 
+   
+</mapper>
+

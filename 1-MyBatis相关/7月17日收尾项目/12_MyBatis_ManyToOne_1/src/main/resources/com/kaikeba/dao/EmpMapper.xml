@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaikeba.dao.EmpMapper">
+ 
+ <resultMap type="employee" id="empMap">
+    <id column="empno" property="empNo"></id>
+    <result column="ename" property="ename"/>
+    <result column="job" property="job"/>
+    <result column="sal" property="sal"/>
+    <association property="dept" javaType="dept">
+        <!-- 既可以是临时表一方表主键字段值，也可是是多方表外键字段值 -->
+        <result column="dept_deptno" property="deptNo"/>
+        <result column="dname" property="dname"/>
+        <result column="loc" property="loc"/>
+    </association>
+ </resultMap>
+
+  <!-- 根据职员编号查询职员基本信息以及隶属部门信息 -->
+  <select id="empFindById" resultMap="empMap">
+     
+             select dept.deptno dept_deptno,
+                    dname,
+                    loc,
+                    empno,ename,job,sal
+             From dept join emp
+             on dept.deptno = emp.deptno
+             where emp.empno=#{xxx}
+  </select>
+   
+</mapper>
+
