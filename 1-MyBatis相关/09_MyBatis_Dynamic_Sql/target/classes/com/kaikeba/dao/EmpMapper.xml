@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaikeba.dao.EmpMapper">
+ 
+ 
+ 
+   <select id="empFind" resultType="employee">
+   
+        SELECT * FROM EMP
+        WHERE 1=1
+        <choose>
+          <when test="sal >= 5000">
+             and job ='PRESIDENT'
+          </when>
+          <when test="sal >=3000">
+            and job ='manager'
+          </when>
+          <when test="sal >=2000">
+             and job='ANALYST'
+          </when>
+          <otherwise>
+             and job in('clerk','salesman')
+          </otherwise>
+        
+        </choose>
+   
+   </select>
+   
+   
+</mapper>
+

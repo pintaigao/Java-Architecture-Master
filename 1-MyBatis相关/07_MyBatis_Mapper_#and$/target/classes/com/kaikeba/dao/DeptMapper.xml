@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaikeba.dao.DeptMapper">
+ 
+
+   <select id="deptFind" resultType="dept">
+      <!--  select * from dept where dname = #{departname} -->
+      select * from dept where dname=${value}
+   </select>
+   
+   
+    <select id="deptFind2" resultType="dept">
+     <!-- 动态指定读取表 可能是dept也可能dept2 -->
+    <!--   select * from #{tableName}  -->
+           select *  from ${value}
+   </select>
+   
+</mapper>
+
