@@ -428,9 +428,10 @@ public static Teacher createTeacher(){
 			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 				System.out.println("ISomeService doSome 被拦截");
 				String result = (String) method.invoke(beanInstance, args);// beanInstance.doSome
-   				return result.toUpperCase();
+				return result.toUpperCase();
 			}
-		});
+		    }
+	        );
                return proxy;
            }
            return beanInstance;
