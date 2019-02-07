@@ -1,7 +1,7 @@
 package com.kaikeba.util;
 
 public class BeanDefined {
-	
+
 	private String beanId;
 	private String classPath;
 	public String getBeanId() {
@@ -16,7 +16,7 @@ public class BeanDefined {
 	public void setClassPath(String classPath) {
 		this.classPath = classPath;
 	}
-	
-	
+
+
 
 }
