@@ -7,9 +7,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd">
-   
+
       <!-- 注册bean:被监控实现类 -->
-      <bean id="isomeService" class="com.kaikeba.serviceImpl.ISomeService"></bean> 
+      <bean id="isomeService"
+          class="com.kaikeba.serviceImpl.ISomeService"></bean>
       <!-- 注册代理实现类 -->
       <bean class="com.kaikeba.util.MyBeanPostProcessor"></bean> 
   

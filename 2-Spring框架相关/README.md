@@ -121,7 +121,9 @@ teacher.getTname()...的使用
    
    ```
 
-**scope**属性：
+
+
+scope**属性：
 
 ```xml
 <bean id = "teacher" class = "com.hptg.bean.Teacher" scope = "prototype" />
@@ -238,6 +240,8 @@ teacher.getTname()...的使用
    }
    ```
 
+
+
 **动态工厂 Dynamic Factory：**
 
 如果不用scope的话(默认方式）该怎么创建或不创建独立的instance?
@@ -351,7 +355,103 @@ Teacher t = (Teacher) factory.getBean("teacher");
    System.out.println("t=" + t);
    ```
 
+
+
+**静态工厂（为了节省内存）**，一个步骤，就是将TeacherFactory这个class变成static的
+
+```java
+//节省内存消耗
+public static Teacher createTeacher(){
+	Teacher teacher = new Teacher();
+	System.out.println("TeacherFactory 负责创建 teacher类实例对象..");
+	return teacher;
+}
+```
+
+并且不需要在spring中单独注册这个bean：将**<bean id = "factory" ... />**删除
+
+然后所关联的实例Bean直接连接到这个工厂中
+
+```xml
+<bean id="teacher" class="com.hptg.util.TeacherFactory" factory-method="createTeacher" />
+```
+
+
+
+**BeanPost工厂**（Bean后处理器，BeanPostProcessor是一个spring写好了的类）
+
+作用：生成Bean对象的代理对象
+
+1. BaseService
+
+   ```java
+   package com.hptg.service;
+   public interface BaseService {
+           public String doSome();
+   }
+   ```
+
+2. Implement这个Service
+
+   ```java
+   package com.hptg.serviceImpl;
+   import com.hptg.service.BaseService;
+   public class ISomeService implements BaseService {
+   	public String doSome() {
+   		return "Hello mike";//增强效果，doSome方法返回值都是大写,所以必然要用到代理模式拦截，见下
+   	}
+   }
+   ```
+
+3. Implement BeanPostProcessor
+
+   ```java
+   package com.hptg.util;
+   public class MyBeanPostProcessor implements BeanPostProcessor {
    
+       public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+           System.out.println("bean对象初始化之前。。。。。");
+           return bean;
+           //return bean对象监控代理对象
+       }
+   
+       public Object postProcessAfterInitialization(final Object beanInstance, String beanName) throws BeansException {
+           // 为当前bean对象注册代理监控对象，负责增强bean对象方法能力
+           Class beanClass = beanInstance.getClass();
+           // 判断他是不是遵循了BaseService原则
+           if (beanClass == ISomeService.class) {
+               Object proxy = Proxy.newProxyInstance(
+                   beanInstance.getClass().getClassLoader(),
+   				beanInstance.getClass().getInterfaces(), 
+                   new InvocationHandler() {
+   					/**
+                       * method:doSome args:doSome执行接受实参 proxy:代理监控对对象
+                       **/
+                       public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+   						System.out.println("ISomeService doSome 被拦截");
+   						String result = (String) method.invoke(beanInstance, args);// beanInstance.doSome
+                           return result.toUpperCase();
+   					}
+   				});
+               return proxy;
+           }
+           return beanInstance;
+       }
+   }
+   ```
+
+4. 在Spring中注册这个类(spring_config.xml)
+
+   ```xml
+   <!-- 注册bean:被监控实现类 -->
+   <bean id="isomeService" class="com.kaikeba.serviceImpl.ISomeService"></bean>
+   <!-- 注册代理实现类 -->
+   <bean class="com.kaikeba.util.MyBeanPostProcessor"></bean>
+   ```
+
+   
+
+
 
 
 
