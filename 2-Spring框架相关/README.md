@@ -425,12 +425,12 @@ public static Teacher createTeacher(){
                    beanInstance.getClass().getInterfaces(), 
                    new InvocationHandler() {
                        // method:doSome args:doSome执行接受实参 proxy:代理监控对对象
-   					public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-   					System.out.println("ISomeService doSome 被拦截");
-   					String result = (String) method.invoke(beanInstance, args);// beanInstance.doSome
-   					return result.toUpperCase();
-   					}
-   				});
+			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+				System.out.println("ISomeService doSome 被拦截");
+				String result = (String) method.invoke(beanInstance, args);// beanInstance.doSome
+   				return result.toUpperCase();
+			}
+   		    });
                return proxy;
            }
            return beanInstance;
