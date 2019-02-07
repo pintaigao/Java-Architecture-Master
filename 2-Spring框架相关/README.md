@@ -430,7 +430,7 @@ public static Teacher createTeacher(){
 				String result = (String) method.invoke(beanInstance, args);// beanInstance.doSome
    				return result.toUpperCase();
 			}
-   		    });
+		});
                return proxy;
            }
            return beanInstance;
