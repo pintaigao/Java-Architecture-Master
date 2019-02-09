@@ -368,7 +368,7 @@ public static Teacher createTeacher(){
 }
 ```
 
-并且不需要在spring中单独注册这个bean：将**<bean id = "factory" ... />**删除
+并且不需要在spring中单独注册这个bean：将**<bean id = "factory" ... />**  ** <bean id = "factory" ... /> ** 删除
 
 然后所关联的实例Bean直接连接到这个工厂中
 
