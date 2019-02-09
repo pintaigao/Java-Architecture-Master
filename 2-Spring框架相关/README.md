@@ -705,6 +705,8 @@ public static void main(String[] args) {
 
 相关代码：
 
+连接点：
+
 ```java
 public interface BaseService {
 	public void eat();//JoinCut 连接点
@@ -716,7 +718,6 @@ public interface BaseService {
 
 ```java
 public class Person implements BaseService {
-
     public void eat() {//切入点 PointCut  主要业务方法
         System.out.println("吃泡面");
     }
@@ -726,6 +727,85 @@ public class Person implements BaseService {
     }
 }
 ```
+
+接下来，切面（通知）：
+
+```java
+/*
+ *
+ *   public class Agent implements InvocationHandler{
+ *
+ *      private BaseService obj;//当前具体被监控对象
+ *
+ *       public Agent(BasseSercie param){
+ *          this.obj = param;
+ *      }
+ *
+ *      public Object invoke(Object proxy,Method method,Object[] args){
+ *             //织入顺序
+ *      }
+ *
+ *      //次要业务
+ *      public wash(){
+ *      }
+ *   }
+ * */
+public class MyBeforeAdvice implements MethodBeforeAdvice {
+    //切面：次要业务（arg0:被拦截的方法）
+    public void before(Method arg0, Object[] arg1, Object arg2) throws Throwable {
+        System.out.println("-----洗手-----");
+        ProxyFactoryBean cc;
+    }
+}
+
+```
+
+接下来，注册：
+
+```xml
+<!-- 注册被监控实现类 -->
+<bean id="person" class="com.kaikeba.serviceImpl.Person"></bean>
+
+<!-- 注册通知实现类 -->
+<bean id="before" class="com.kaikeba.advice.MyBeforeAdvice"></bean>
+
+<!-- 注册 代理监控对象的生产工厂 -->
+<bean id="personProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <!-- target：被拦截的对象，interceptorNames：拦截器的名字，指向通知 -->
+	<property name="target" ref="person"></property>
+	<property name="interceptorNames">
+		<array>
+			<value>before</value>
+		</array>
+	</property>
+</bean>
+```
+
+和之前的那个洗手吃饭实现方式相比，是不是简介了很多，
+
+接着，执行（P.s:getBean反悔的不再是Person，而是Proxy返回的Person代理对象personProxy）
+
+```java
+public class TestMain {
+    public static void main(String[] args) {
+        ApplicationContext factory = new ClassPathXmlApplicationContext("spring_config.xml");
+        BaseService personProxy = (BaseService) factory.getBean("personProxy");
+        personProxy.eat();// 洗手  吃饭
+        personProxy.wc(); //  上厕所
+    }
+}
+```
+
+它会输出：
+
+```
+--洗手--
+吃泡面
+--洗手--
+上厕所
+```
+
+
 
 
 

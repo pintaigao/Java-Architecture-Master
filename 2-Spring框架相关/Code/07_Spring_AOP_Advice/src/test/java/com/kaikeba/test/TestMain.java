@@ -10,12 +10,12 @@ import com.kaikeba.service.BaseService;
 
 public class TestMain {
 
-	public static void main(String[] args) {
-		
-		ApplicationContext factory = new ClassPathXmlApplicationContext("spring_config.xml");
-		BaseService personProxy = (BaseService) factory.getBean("personProxy");
-		personProxy.eat();// 洗手  吃饭
-		personProxy.wc(); //  上厕所
-	}
+    public static void main(String[] args) {
+
+        ApplicationContext factory = new ClassPathXmlApplicationContext("spring_config.xml");
+        BaseService personProxy = (BaseService) factory.getBean("personProxy");
+        personProxy.eat();// 洗手  吃饭
+        personProxy.wc(); //  上厕所
+    }
 
 }
