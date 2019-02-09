@@ -128,7 +128,7 @@ teacher.getTname()...的使用
 ```xml
 <bean id = "teacher" class = "com.hptg.bean.Teacher" scope = "prototype" />
 ```
-**scope = singleton：**他所属的类会在Spring容器启动的时候，被创建保存在Spring框架SingletonList，在每次用户调用getBean方法索要时，此时只会返回同一个实例对象
+**scope = singleton**：他所属的类会在Spring容器启动的时候，被创建保存在Spring框架SingletonList，在每次用户调用getBean方法索要时，此时只会返回同一个实例对象
 
 **scope = prototype**：这样的类不会在Spring容器启动时被创建，只有在每次用户调用getBean方法索要时，返回全新实例对象
 
@@ -368,7 +368,7 @@ public static Teacher createTeacher(){
 }
 ```
 
-并且不需要在spring中单独注册这个bean：将**<bean id = "factory" ... />**删除
+并且不需要在spring中单独注册这个bean：将 **< bean id = "factory"... />** 删除
 
 然后所关联的实例Bean直接连接到这个工厂中
 
