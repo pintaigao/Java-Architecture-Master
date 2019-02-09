@@ -10,12 +10,12 @@ import com.kaikeba.service.BaseService;
 
 public class TestMain {
 
-	public static void main(String[] args) {
-		
-		ApplicationContext factory = new ClassPathXmlApplicationContext("spring_config.xml");
-		BaseService serviceObj = (BaseService) factory.getBean("isomeService");
-		System.out.println(serviceObj.doSome());
+    public static void main(String[] args) {
 
-	}
+        ApplicationContext factory = new ClassPathXmlApplicationContext("spring_config.xml");
+        BaseService serviceObj = (BaseService) factory.getBean("isomeService");
+        System.out.println(serviceObj.doSome());
+
+    }
 
 }

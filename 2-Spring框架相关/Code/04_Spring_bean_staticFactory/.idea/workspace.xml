@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="988694b3-754b-41db-b116-9cce0fb31a24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../03_MySpring_bean_DyNamicFactory/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03_MySpring_bean_DyNamicFactory/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring_config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/java/com/kaikeba/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/java/com/kaikeba/service/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/java/com/kaikeba/serviceImpl/ISomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/java/com/kaikeba/serviceImpl/ISomeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/java/com/kaikeba/util/MyBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/java/com/kaikeba/util/MyBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/resources/spring_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/main/resources/spring_config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
-    </list>
+    <list default="true" id="988694b3-754b-41db-b116-9cce0fb31a24" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

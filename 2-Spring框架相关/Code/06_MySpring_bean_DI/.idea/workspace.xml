@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d9a2745-a679-4149-a945-c69768770548" name="Default" comment="">
+    <list default="true" id="694fe612-a36b-460b-8b47-d25dd8967c83" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../04_Spring_bean_staticFactory/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_Spring_bean_staticFactory/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/test/java/com/kaikeba/test/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05_Spring_bean_BeanPostProcessor/src/test/java/com/kaikeba/test/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaikeba/beans/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaikeba/beans/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanDefined.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanDefined.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/kaikeba/test/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kaikeba/test/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_Spring_bean_DI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06_Spring_bean_DI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_Spring_bean_DI/src/main/java/com/kaikeba/beans/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06_Spring_bean_DI/src/main/java/com/kaikeba/beans/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_Spring_bean_DI/src/main/resources/spring_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06_Spring_bean_DI/src/main/resources/spring_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06_Spring_bean_DI/src/test/java/com/kaikeba/test/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06_Spring_bean_DI/src/test/java/com/kaikeba/test/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,37 +24,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/beans/Teacher.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanDefined.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="405">
+              <caret line="32" column="13" selection-start-line="5" selection-end-line="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/util/TeacherFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/kaikeba/test/TestMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="43" lean-forward="true" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/beans/TeacherFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/kaikeba/test/TestMain.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring_config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="535">
+              <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -64,17 +67,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kaikeba/beans/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring_config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanDefined.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/kaikeba/test/TestMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanFactory.java" />
       </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="PhpServers">
@@ -94,42 +90,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kaikeba" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -137,8 +134,8 @@
               <item name="beans" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -146,17 +143,8 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kaikeba" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -164,28 +152,21 @@
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="01_Spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="06_Spring_bean_DI" type="462c0819:PsiDirectoryNode" />
+              <item name="01_MySpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06_MySpring_bean_DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -195,17 +176,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549609180257" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549655764900" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -220,58 +200,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6d9a2745-a679-4149-a945-c69768770548" name="Default" comment="" />
-      <created>1532264152229</created>
+      <changelist id="694fe612-a36b-460b-8b47-d25dd8967c83" name="Default Changelist" comment="" />
+      <created>1549650329510</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1532264152229</updated>
-      <workItem from="1532264153487" duration="48000" />
-      <workItem from="1549584821917" duration="2605000" />
+      <updated>1549650329510</updated>
+      <workItem from="1549650332330" duration="1316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2653000" />
+    <option name="totallyTimeSpent" value="1316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1826411" />
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -281,63 +241,73 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Flutter Inspector" />
       <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/service/BaseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanDefined.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring_config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/beans/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/util/TeacherFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="405">
+          <caret line="32" column="13" selection-start-line="5" selection-end-line="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/kaikeba/test/TestMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="540">
+          <caret line="43" lean-forward="true" selection-end-line="48" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/beans/TeacherFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="483" column="18" selection-start-line="483" selection-start-column="18" selection-end-line="483" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kaikeba/util/BeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -7,12 +7,12 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd">
-   
-        <bean id="teacher" class="com.kaikeba.beans.Teacher">
-            <property name="teacherName" value="Mr Zhao"></property>
-            <property name="friendArray" value="mike,allen,tom"></property>
-            <property name="school"      value="北京航天航空大学,沈阳工业大学"></property>
-        </bean>
-  
+
+    <bean id="teacher" class="com.kaikeba.beans.Teacher">
+        <property name="teacherName" value="Mr Zhao"></property>
+        <property name="friendArray" value="mike,allen,tom"></property>
+        <property name="school" value="北京航天航空大学,沈阳工业大学"></property>
+    </bean>
+
 
 </beans>
