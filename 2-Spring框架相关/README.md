@@ -705,7 +705,7 @@ public static void main(String[] args) {
 
 相关代码：
 
-连接点：
+**连接点**：
 
 ```java
 public interface BaseService {
@@ -714,7 +714,7 @@ public interface BaseService {
 }
 ```
 
-实现以上的叫切入点：
+实现以上的叫**切入点**：
 
 ```java
 public class Person implements BaseService {
@@ -806,6 +806,187 @@ public class TestMain {
 ```
 
 
+
+**Spring AOP Advisor**:
+
+什么是Advisor，它是一种织入方式，实际上是上面Advice（通知）的封装版，可以动态的将切面指定对应切入点(方法)
+
+**Spring AOP Advisor 继承实现关系**
+
+1. ClassFilter 类过滤器（假设现在有两个类（Person和Dog）实现了BaseSerive，判断为哪个类提供织入服务）
+
+   ```java
+   public class MyClassFilter implements ClassFilter {
+       /*
+        *  1.一个接口下会有多个实现类
+        *  2.判断当前实现类是不是我们织入方式关心的目标类
+        *  BaseService接口我们现在只想管理Person.
+        *  参数：就是当前被拦截类：可能Person，可能Dog
+        * */
+       public boolean matches(Class<?> clazz) {
+           if (clazz == Person.class) {
+               return true;//告诉顾问，当前类是需要我们提供织入服务
+           }
+           // Dog
+           return false;
+       }
+   }
+   ```
+
+2. 匹配到类后，就要来管管类里面的方法了，所以要有一个方法匹配器（这个类中的哪个方法要给他提供织入服务）：
+
+   ```java
+   public class MyMethodMatcher implements MethodMatcher {
+       /*
+        *  被监控接口比如（BaseService），没有重载方法
+        *  每一个方法名称都是以唯一
+        *  此时可以采用 static检测方式，只根据方法名称判断
+        * 参数：method: 接口中某一个方法
+        *     targetClass: 接口中一个实现类
+        *
+        *  业务：只想为Person类中eat方法提供织入
+        */
+       public boolean matches(Method method, Class<?> targetClass) {
+           String methodName = method.getName();
+           if ("eat".equals(methodName)) {
+               return true;
+           }
+           return false;
+       }
+   
+       public boolean isRuntime() {
+           // TODO Auto-generated method stub
+           return false;
+       }
+   
+       public boolean matches(Method method, Class<?> targetClass, Object... args) {
+           // TODO Auto-generated method stub
+           return false;
+       }
+   }
+   ```
+
+3. 自定义的切入点（Pointcut）
+
+   ```java
+   public class MyPointCut implements Pointcut {
+       /*与下面这个的效果相当
+        * InvocationHandler接口
+        *    invoke(){
+        *        if(obj.getClass ！= person.class){
+        *              return
+        *        }
+        *
+        *        if(!methodObj.getName.equals("eat")){
+        *               return
+        *        }
+        *        //织入方式:次要业务方法和 Peson.eat()执行顺序
+        *        //前置通知
+        *          wash（）；
+        *          Person.eat()
+        *    }
+        * */
+       //使用依赖注入来为这两个域赋值
+       private ClassFilter classFilter;
+       private MethodMatcher metodMatcher;
+       // ... 以及他们的get & set 方法
+   }
+   ```
+
+4. 顾问类Advisor
+
+   ```java
+   public class MyPointCutAdvisor implements PointcutAdvisor {
+       //采用依赖注入 set
+       private Advice advice;//次要业务以及次要业务与主要业务执行顺序
+       private Pointcut pointcut;//当前拦截对象和对象调用主要业务方法 person对象.eat()
+       public void setAdvice(Advice advice) {
+           this.advice = advice;
+       }
+       
+       public Pointcut getPointcut() {
+           // TODO Auto-generated method stub
+           return this.pointcut;
+       }
+   
+       public void setPointcut(Pointcut pointcut) {
+           this.pointcut = pointcut;
+       }
+   
+       public Advice getAdvice() {
+           // TODO Auto-generated method stub
+           return this.advice;
+       }
+   
+       public boolean isPerInstance() {
+           // TODO Auto-generated method stub
+           return false;
+       }
+   
+   }
+   
+   ```
+
+5. 注册以上这些东西：
+
+   ```xml
+   <!-- 注册被监控实现类 -->
+    <bean id="person" class="com.kaikeba.serviceImpl.Person"></bean>
+    <bean id="dog" class="com.kaikeba.serviceImpl.Gog"></bean>
+   
+    <!-- 注册通知实现类 -->
+    <bean id="before" class="com.kaikeba.advice.MyBeforeAdvice"></bean>
+   
+   <!-- 注册类型过滤器 -->
+   <bean id="classFilter" class="com.kaikeba.util.MyClassFilter"></bean>
+   <!-- 注册方法匹配器 -->
+   <bean id="methodMatcher" class="com.kaikeba.util.MyMethodMatcher"></bean>
+   
+   <!-- 注册切入点 -->
+   <bean id="pointCut" class="com.kaikeba.util.MyPointCut">
+   	<property name="classFilter" ref="classFilter"></property>
+       <property name="metodMatcher" ref="methodMatcher"></property>
+   </bean>
+   
+   <!-- 注册顾问 -->
+   <bean id="myAdvisor" class="com.kaikeba.util.MyPointCutAdvisor">
+   	<property name="advice" ref="before"></property>
+       <property name="pointcut" ref="pointCut"></property>
+   </bean>
+   
+   <!-- 注册代理对象工厂 -->
+   <!--
+   	此时生成代理对象，只会负责person.eat方法监控
+       与Advice不同，不会对BaseService所有的方法进行监控
+    -->
+   <bean id="personProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+   	<property name="target" ref="person"></property>
+       <property name="interceptorNames" value="myAdvisor"></property>
+   </bean>
+   ```
+
+6. 应用
+
+   ```java
+   public class TestMain {
+       public static void main(String[] args) {
+           ApplicationContext factory = new ClassPathXmlApplicationContext("spring_config.xml");
+           BaseService personProxy = (BaseService) factory.getBean("personProxy");
+           personProxy.eat();//洗手  吃饭
+           personProxy.wc();// wc
+       }
+   }
+   ```
+
+   输出：
+
+   ```
+   ---洗手---
+   吃泡面
+   上厕所
+   ```
+
+   
 
 
 

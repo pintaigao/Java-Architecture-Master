@@ -2,51 +2,48 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:p="http://www.springframework.org/schema/p"
-    xmlns:c="http://www.springframework.org/schema/c"
-    xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+    xmlns:c="http://www.springframework.org/schema/c" xsi:schemaLocation=" http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd">
-   
-       <!-- 注册被监控实现类 -->
-       <bean id="person" class="com.kaikeba.serviceImpl.Person"></bean>
-       <bean id="dog" class="com.kaikeba.serviceImpl.Gog"></bean>
-       
-       <!-- 注册通知实现类 -->
-       <bean id="before" class="com.kaikeba.advice.MyBeforeAdvice"></bean>
-       
-       <!-- 注册类型过滤器 -->
-       <bean id="classFilter" class="com.kaikeba.util.MyClassFilter"></bean>
-       <!-- 注册方法匹配器 -->
-       <bean id="methodMatcher" class="com.kaikeba.util.MyMethodMatcher"></bean>
-       
-       <!-- 注册切入点 -->
-       <bean id="pointCut" class="com.kaikeba.util.MyPointCut" >
-          <property name="classFilter" ref="classFilter"></property>
-          <property name="metodMatcher" ref="methodMatcher"></property>
-       </bean>
-       
-       <!-- 注册顾问 -->
-       <bean id="myAdvisor" class="com.kaikeba.util.MyPointCutAdvisor">
-           <property name="advice" ref="before"></property>
-           <property name="pointcut" ref="pointCut"></property>
-       </bean>
-       
-       <!-- 注册代理对象工厂 -->
-       <!-- 
-                             此时生成代理对象，只会负责person.eat方法监控
-                             与Advice不同，不会对BaseService所有的方法进行监控                
-        -->
-       <bean id="personProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-              <property name="target" ref="person"></property>
-              <property name="interceptorNames" value="myAdvisor"></property>
-       </bean>
-       
-       
-       
-       
-       
-       
-  
+
+    <!-- 注册被监控实现类 -->
+    <bean id="person" class="com.kaikeba.serviceImpl.Person"></bean>
+    <bean id="dog" class="com.kaikeba.serviceImpl.Gog"></bean>
+
+    <!-- 注册通知实现类 -->
+    <bean id="before" class="com.kaikeba.advice.MyBeforeAdvice"></bean>
+
+    <!-- 注册类型过滤器 -->
+    <bean id="classFilter" class="com.kaikeba.util.MyClassFilter"></bean>
+    <!-- 注册方法匹配器 -->
+    <bean id="methodMatcher" class="com.kaikeba.util.MyMethodMatcher"></bean>
+
+    <!-- 注册切入点 -->
+    <bean id="pointCut" class="com.kaikeba.util.MyPointCut">
+        <property name="classFilter" ref="classFilter"></property>
+        <property name="metodMatcher" ref="methodMatcher"></property>
+    </bean>
+
+    <!-- 注册顾问 -->
+    <bean id="myAdvisor" class="com.kaikeba.util.MyPointCutAdvisor">
+        <property name="advice" ref="before"></property>
+        <property name="pointcut" ref="pointCut"></property>
+    </bean>
+
+    <!-- 注册代理对象工厂 -->
+    <!--
+         此时生成代理对象，只会负责person.eat方法监控
+         与Advice不同，不会对BaseService所有的方法进行监控
+     -->
+    <bean id="personProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="person"></property>
+        <property name="interceptorNames" value="myAdvisor"></property>
+    </bean>
+
+    <bean id="dogProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="dog"></property>
+        <property name="interceptorNames" value="myAdvisor"></property>
+    </bean>
 
 </beans>
