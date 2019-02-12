@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 配置目标对象 -->
+	<bean class="com.kkb.spring.service.UserServiceImpl"></bean>
+	<!-- 配置通知类 -->
+	<bean id="myAdvice" class="com.kkb.spring.advice.MyAdvice"></bean>
+
+	<!-- AOP配置 -->
+	<aop:config>
+		<!-- 配置AOP切面，切面是由通知和切入点组成的 -->
+		<aop:aspect ref="myAdvice">
+			<!-- before：前置通知 -->
+			<!-- pointcut:编写切入点表达式 ,去定位需要切入的方法是哪个 -->
+			<!-- method：增强类中的方法 -->
+			<!-- <aop:before method="log" -->
+			<!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())" 
+				/> -->
+			<!-- <aop:after-returning method="log2" -->
+			<!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())" 
+				/> -->
+			<!-- <aop:after method="log3" -->
+			<!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())" 
+				/> -->
+			<!-- <aop:after-throwing method="log4" -->
+			<!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())" 
+				/> -->
+			<aop:around method="log5"
+	pointcut="execution(void *..*.*ServiceImpl.*(..))" />
+<!-- 			 pointcut="execution(void com.kkb.spring.service.UserService.saveUser())" /> -->
+		</aop:aspect>
+	</aop:config>
+
+</beans>
