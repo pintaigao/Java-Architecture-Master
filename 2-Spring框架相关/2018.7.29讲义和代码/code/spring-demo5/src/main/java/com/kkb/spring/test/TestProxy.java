@@ -1,4 +1,4 @@
-package com.kkb.spring.test;
+ package com.kkb.spring.test;
 
 import org.junit.Test;
 

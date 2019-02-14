@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5c2b1fc-c164-4c79-acee-b4c560dec05c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kkb/spring/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kkb/spring/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kkb/spring/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kkb/spring/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kkb/spring/test/TestSpringIoC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kkb/spring/test/TestSpringIoC.class" afterDir="false" />
+    <list default="true" id="50f17a55-eed9-414d-a886-adb34081dce7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Spring5讲义.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring5讲义.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/src/main/java/com/kkb/spring/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/src/main/java/com/kkb/spring/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/test/TestSpringIoC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/test/TestSpringIoC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo5/src/main/java/com/kkb/spring/test/TestProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo5/src/main/java/com/kkb/spring/test/TestProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo5/src/main/java/com/kkb/spring/utils/MyProxyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo5/src/main/java/com/kkb/spring/utils/MyProxyUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kkb/spring/advice/MyAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kkb/spring/advice/MyAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,32 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestSpringIoC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="570">
+              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/advice/MyAdvice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -58,8 +51,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestSpringIoC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kkb/spring/advice/MyAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
       </list>
     </option>
   </component>
@@ -72,7 +65,9 @@
     <option name="width" value="1280" />
     <option name="height" value="981" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -83,29 +78,29 @@
           <expand>
             <path>
               <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -113,7 +108,16 @@
             </path>
             <path>
               <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="advice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -122,24 +126,10 @@
             </path>
             <path>
               <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-demo6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-demo1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-demo1" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -152,7 +142,6 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549957363891" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -170,71 +159,44 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="TestSpringIoC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-demo1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kkb.spring.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.kkb.spring.test" />
-      <option name="MAIN_CLASS_NAME" value="com.kkb.spring.test.TestSpringIoC" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.TestSpringIoC" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c5c2b1fc-c164-4c79-acee-b4c560dec05c" name="Default Changelist" comment="" />
-      <created>1549947937156</created>
+      <changelist id="50f17a55-eed9-414d-a886-adb34081dce7" name="Default Changelist" comment="" />
+      <created>1550103894011</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1549947937156</updated>
-      <workItem from="1549947939634" duration="2333000" />
+      <updated>1550103894011</updated>
+      <workItem from="1550103896975" duration="2324000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="TestSpringIoC - 2019.02.12 at 01h 20m 59s.xml">
-      <configuration name="TestSpringIoC" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2333000" />
+    <option name="totallyTimeSpent" value="2324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="981" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20678514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24717286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295838" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -256,13 +218,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -270,27 +225,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestSpringIoC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/advice/MyAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
         </state>
       </provider>
     </entry>

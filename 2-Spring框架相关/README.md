@@ -10,18 +10,12 @@
 package com.hptg.beans;
 public class Teacher {
     private String tname;
-	public String getTname() {
-		return tname;
-	}
-
-	public void setTname(String tname) {
-		this.tname = tname;
-	}
+    ...以及其对应的get/set方法
 }
 
 ```
 
-然后为了让Spring注册这个bean，需要在**java/resources**文件夹下面添加这个文件：spring_config.xml
+然后为了让Spring注册这个bean，需要在**java/resources**文件夹下面添加这个文件：**spring_config.xml**
 
 ```xml
 <beans>
@@ -31,7 +25,7 @@ public class Teacher {
 </beans>
 ```
 
-在Main中使用这个bean
+在Main中使用这个bean（针对使用xml类型的spring）
 
 ```java
 ApplicationContext factory = new ClassPathXmlApplicationContext("spring_config.xml");
@@ -46,26 +40,14 @@ teacher.getTname()...的使用
 1. 创建一个统筹Bean的Class（所有的Bean都符合这个标准）
 
    ```java
-   package com.kaikeba.util;
    public class BeanDefined {
    	private String beanId;
    	private String classPath;
-   	public String getBeanId() {
-   		return beanId;
-   	}
-   	public void setBeanId(String beanId) {
-   		this.beanId = beanId;
-   	}
-   	public String getClassPath() {
-   		return classPath;
-   	}
-   	public void setClassPath(String classPath) {
-   		this.classPath = classPath;
-   	}
+   	...以及其对应的get/set方法
    }
    ```
 
-2. 创建一个Bean Factory工厂Class
+2. 创建一个BeanFactory工厂Class
 
    ```java
    public class BeanFactory {
