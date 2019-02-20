@@ -55,3 +55,12 @@ Spring 框架的核心就是IOC和AOP
 
 
 ### 二. Spring 容器初始化过程
+
+什么是Web服务器（Servlet容器）？Tomcat，Jetty，JBoss等
+
+什么是Web容器？ ServletContext，P.s: 只要 Tomcat启动了Servlet也会启动
+
+什么是Spring容器？ApplicationContext（Spring上下文，实现BeanFactory）
+
+1. Web 容器初始化的过程
+   <img src="Note/Web容器初始化过程.png" style="zoom:50%" />
