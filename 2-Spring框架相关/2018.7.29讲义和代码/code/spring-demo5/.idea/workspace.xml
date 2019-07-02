@@ -2,17 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2199f59f-2b91-4273-8bf9-369adc8d55d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Spring5讲义.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring5讲义.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/src/main/java/com/kkb/spring/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/src/main/java/com/kkb/spring/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/test/TestSpringIoC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo1/target/classes/com/kkb/spring/test/TestSpringIoC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kkb/spring/utils/MyProxyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kkb/spring/utils/MyProxyUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/01_MySpring/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/01_MySpring/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/01_MySpring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/01_MySpring/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/target/classes/META-INF/maven/com.kaikeba/01_MySpring/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/target/classes/META-INF/maven/com.kaikeba/01_MySpring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/target/classes/com/kaikeba/util/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_MySpring_bean_scope/target/classes/com/kaikeba/util/BeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_Spring_bean_scope/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_Spring_bean_scope/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_Spring_bean_scope/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/02_Spring_bean_scope/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/target/classes/META-INF/maven/com.kaikeba/01_MySpring/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/target/classes/META-INF/maven/com.kaikeba/01_MySpring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/target/classes/com/kaikeba/util/BeanDefined.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_MySpring_bean_DyNamicFactory/target/classes/com/kaikeba/util/BeanDefined.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/target/classes/META-INF/maven/com.kaikeba/01_Spring/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/target/classes/META-INF/maven/com.kaikeba/01_Spring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/target/classes/spring_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/03_Spring_bean_DyNamicFactory/target/classes/spring_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/META-INF/maven/com.kaikeba/01_MySpring/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/META-INF/maven/com.kaikeba/01_MySpring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/beans/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/beans/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/beans/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/beans/Teacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/beans/TeacherFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/beans/TeacherFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/service/BaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/service/BaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/serviceImpl/ISomeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/serviceImpl/ISomeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/BeanDefined.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/BeanDefined.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/BeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/BeanPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/BeanPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/MyBeanPostProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/MyBeanPostProcessor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/MyBeanPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/MyBeanPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/test-classes/com/kaikeba/test/TestMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_MySpring_bean_BeanPostProcessor/target/test-classes/com/kaikeba/test/TestMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/target/classes/META-INF/maven/com.kaikeba/01_Spring/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/target/classes/META-INF/maven/com.kaikeba/01_Spring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/MyBeanPostProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/target/classes/com/kaikeba/util/MyBeanPostProcessor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/target/classes/spring_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.22讲义和代码/Code/05_Spring_bean_BeanPostProcessor/target/classes/spring_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../English Version/Spring笔记.docx" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,21 +58,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/utils/MyProxyUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            <state relative-caret-position="374">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="466">
+              <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -50,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -75,9 +114,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2260" />
+    <option name="width" value="2560" />
     <option name="height" value="981" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -88,8 +127,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,7 +204,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550046368723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552778790764" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -183,6 +222,28 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="TestProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-demo1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kkb.spring.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kkb.spring.test" />
+      <option name="MAIN_CLASS_NAME" value="com.kkb.spring.test.TestProxy" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestProxy" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -194,71 +255,66 @@
       <option name="presentableId" value="Default" />
       <updated>1550042519802</updated>
       <workItem from="1550042521307" duration="2546000" />
+      <workItem from="1552774795380" duration="1061000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestProxy - 2019.03.16 at 18h 24m 51s.xml">
+      <configuration name="TestProxy" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2546000" />
+    <option name="totallyTimeSpent" value="3607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="981" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12271644" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123510726" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="UI Designer" order="6" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Flutter Outline" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Flutter Performance" order="13" side_tool="true" />
+      <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Flutter Inspector" order="5" />
+      <window_info anchor="right" id="Flutter Outline" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="483" column="18" selection-start-line="483" selection-start-column="18" selection-end-line="483" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/utils/MyProxyUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -269,10 +325,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/utils/MyProxyUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="466">
+          <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kkb/spring/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>

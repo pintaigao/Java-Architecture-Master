@@ -1,4 +1,4 @@
-# Spring   框架相关知识
+# Spring   框架相关知识（配合手写笔记看）
 
 ### 1. 基础知识
 
@@ -52,13 +52,7 @@ teacher.getTname()...的使用
    ```java
    public class BeanFactory {
        private List<BeanDefined> beanDefinedList;
-       public List<BeanDefined> getBeanDefinedList() {
-           return beanDefinedList;
-       }
-   
-       public void setBeanDefinedList(List<BeanDefined> beanDefinedList) {
-           this.beanDefinedList = beanDefinedList;
-       }
+    	...以及它对应的get/set方法   
    
        // 实现像原生的那样的getBean功能
        public Object getBean(String beanId) throws Exception {
@@ -88,7 +82,7 @@ teacher.getTname()...的使用
            beanObj.setBeanId("teacher");
            beanObj.setClassPath("com.hptg.beans.Teacher");
    
-           List beanList = new ArrayList();
+           List beanList = new ArrayList();// 相当于配置中所有bean标签的一个信息
            beanList.add(beanObj);//spring核心配置
    
            //2.声明一个Spring提供BeanFacotory
@@ -154,11 +148,8 @@ teacher.getTname()...的使用
    public class BeanFactory {
    
        private List<BeanDefined> beanDefinedList;
+       ...以及get/set方法
        private Map<String, Object> SpringIoc;//已经创建好实例对象
-   
-       public List<BeanDefined> getBeanDefinedList() {
-           return beanDefinedList;
-       }
    
        public BeanFactory(List<BeanDefined> beanDefinedList) throws Exception {
            this.beanDefinedList = beanDefinedList;
@@ -170,10 +161,6 @@ teacher.getTname()...的使用
                    SpringIoc.put(beanObj.getBeanId(), instance);
                }
            }
-       }
-   
-       public void setBeanDefinedList(List<BeanDefined> beanDefinedList) {
-           this.beanDefinedList = beanDefinedList;
        }
    
        public Object getBean(String beanId) throws Exception {
@@ -360,7 +347,7 @@ public static Teacher createTeacher(){
 
 
 
-**BeanPost工厂**（Bean后处理器，BeanPostProcessor是一个spring写好了的类）
+**BeanPost工厂**（Bean后处理器，BeanPostProcessor是一个spring写好了的类）（AOP的实现方式）
 
 作用：生成Bean对象的代理对象
 
@@ -385,7 +372,7 @@ public static Teacher createTeacher(){
    }
    ```
 
-3. Implement BeanPostProcessor
+3. Implement **BeanPostProcessor**
 
    ```java
    package com.hptg.util;

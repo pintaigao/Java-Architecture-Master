@@ -22,21 +22,13 @@
             <!-- before：前置通知 -->
             <!-- pointcut:编写切入点表达式 ,去定位需要切入的方法是哪个 -->
             <!-- method：增强类中的方法 -->
-            <!-- <aop:before method="log" -->
-            <!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())"
-                /> -->
-            <!-- <aop:after-returning method="log2" -->
-            <!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())"
-                /> -->
+            <aop:before method="log" pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser(String))"/>
+            <!--<aop:after-returning method="log2" pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())"/>-->
             <!--after-returning 之后 after 最终通知 -->
-            <!-- <aop:after method="log3" -->
-            <!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())"
-                /> -->
-            <!-- <aop:after-throwing method="log4" -->
-            <!-- pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())"
-                /> -->
+            <!--<aop:after method="log3" pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())"/>-->
+            <!--<aop:after-throwing method="log4" pointcut="execution(void com.kkb.spring.service.UserServiceImpl.saveUser())"/>-->
             <!--around:环绕通知-->
-            <aop:around method="log5" pointcut="execution(void *..*.*ServiceImpl.*(..))" />
+            <!--<aop:around method="log5" pointcut="execution(void *..*.*ServiceImpl.*(..))" />-->
             <!-- pointcut="execution(void com.kkb.spring.service.UserService.saveUser())" /> -->
         </aop:aspect>
     </aop:config>

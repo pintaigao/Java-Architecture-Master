@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 管理spring内置的DataSource -->
+	<!-- <bean id="dataSource" -->
+	<!-- class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+	<!-- set方法注入属性，和类中的成员属性无关，和set方法名称有关，比如有个属性叫username，但是set方法：setName -->
+	<!-- <property name="driverClassName" -->
+	<!-- value="com.mysql.jdbc.Driver" /> -->
+	<!-- <property name="url" value="jdbc:mysql:///kkb" /> -->
+	<!-- <property name="username" value="root" /> -->
+	<!-- <property name="password" value="root" /> -->
+
+	<!-- </bean> -->
+
+	<!-- 管理第三方的DataSource -->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<!-- set方法注入属性，和类中的成员属性无关，和set方法名称有关，比如有个属性叫username，但是set方法：setName -->
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql:///kkb" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<!-- 管理JdbcTemplate -->
+	<bean id="template"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
+	</bean>
+</beans>

@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - TestMain",
+      "request": "launch",
+      "mainClass": "com.kaikeba.test.TestMain",
+      "projectName": "01_MySpring"
+    }
+  ]
+}

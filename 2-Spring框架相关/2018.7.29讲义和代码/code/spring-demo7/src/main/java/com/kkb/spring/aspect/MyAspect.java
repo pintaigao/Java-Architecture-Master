@@ -13,33 +13,39 @@ import org.springframework.stereotype.Component;
 // 需要将切面类交给Spring IoC容器管理
 @Component("myAspect")
 public class MyAspect {
-	//切入点表达式
-	private static final String str="execution(* *..*.*ServiceImpl.*(..))";
+    //切入点表达式
+    private static final String str = "execution(* *..*.*ServiceImpl.*(..))";
 
-	// @Before：定义该方法是一个前置通知
-	/*@Before(value = "execution(* *..*.*ServiceImpl.*(..))")
-	public void before() {
-		System.out.println("注解前置通知");
-	}
+    // @Before：定义该方法是一个前置通知
+    /*@Before(value = "execution(* *..*.*ServiceImpl.*(..))")
+    public void before() {
+        System.out.println("注解前置通知");
+    }
 
-	@After(value = "execution(* *..*.*ServiceImpl.*(..))")
-	public void after() {
-		System.out.println("注解最终通知");
-	}*/
-	
-	@Before(value = "fn()")
-	public void before() {
-		System.out.println("注解前置通知");
-	}
+    @After(value = "execution(* *..*.*ServiceImpl.*(..))")
+    public void after() {
+        System.out.println("注解最终通知");
+    }*/
 
-	@After(value = "fn()")
-	public void after() {
-		System.out.println("注解最终通知");
-	}
-	
-	//使用PointCut注解，来定义一个通用切入点表达式
-	@Pointcut(value=str)
-	public void fn() {}
-	
-	
+    @Before(value = "fn()")
+    public void before() {
+        System.out.println("注解前置通知");
+    }
+
+    @After(value = "fn()")
+    public void after() {
+        System.out.println("注解最终通知");
+    }
+
+    @AfterReturning(value = "fn()")
+    public void afterReturning() {
+        System.out.println("注解最终后返回通知");
+    }
+
+    //使用PointCut注解，来定义一个通用切入点表达式
+    @Pointcut(value = str)
+    public void fn() {
+    }
+
+
 }
