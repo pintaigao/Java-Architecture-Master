@@ -523,6 +523,268 @@ l  **Spring容器：指的就是IoC容器。**
 
 * @Configuration（相当于<beans>根标签）
 
+  * **介绍：**
+
+    从Spring3.0，@Configuration用于定义**配置类**，可替换xml配置文件
+
+    相当于<beans>根标签
+
+    配置类**内部包含有一个或多个被**@Bean注解**的方法，这些方法将会被AnnotationConfigApplicationContext或AnnotationConfigWebApplicationContext类进行扫描，并用于构建bean定义，初始化Spring容器。
+    
+  * **属性：**
+
+    value:用于指定配置类的字节码
+
+  * **示例代码**：
+  
+    ```java
+    @Configuration
+    public class SpringConfiguration {
+    	//spring容器初始化时，会调用配置类的无参构造函数
+      public SpringConfiguration(){
+    		System.out.println(“容器启动初始化。。。”);
+    	}
+    }
+    ```
+  
+* @Bean
+
+  * 介绍
+
+    * @Bean标注在方法上(返回某个实例的方法)，等价于spring配置文件中的<bean>
+    * 作用为：注册bean对象
+    * 主要用来配置非自定义的bean，比如DruidDataSource、SqlSessionFactory
+
+  * 属性：
+
+    * name：给当前@Bean 注解方法创建的对象指定一个名称(即 bean 的 id）
+    * 如果不指定，默认与标注的方法名相同
+    * @Bean注解默认作用域为单例singleton作用域，可通过@Scope(“prototype”)设置为原型作用域；
+
+  * **示例代码：**
+
+    ```java
+    @Configuration
+    public class SpringConfiguration {
+    	//spring容器初始化时，会调用配置类的无参构造函数
+      public SpringConfiguration(){
+    		System.out.println(“容器启动初始化。。。”);
+    	}
+    	@Bean
+    	@Scope(“prototype”)
+    	public UserService userService(){
+    		return new UserServiceImpl(1,“张三”);
+    	}
+    }
+    ```
+
+* @ComponentScan
+
+  * 介绍
+
+    * 相当于context:component-scan标签
+    * 组件扫描器，扫描@Component、@Controller、@Service、@Repository注解的类。
+    * 该注解是编写在类上面的，一般配合@Configuration注解一起使用。
+
+  * 属性：
+
+    * basePackages：用于指定要扫描的包。
+    * value：和basePackages作用一样。
+
+  * 示例代码：
+
+    * Bean类（Service类）：
+
+      ```java
+      @Service
+      public class UserServiceImpl implements UserService {
+      	@Override
+      	public void saveUser() {
+      		System.out.println("保存用户   Service实现");
+      	}
+      }
+      ```
+
+    * 配置类：
+
+      ```java
+      @Configuration
+      @ComponentScan(basePackages="com.kkb.spring.service")
+      public class SpringConfiguration {
+      
+      	public SpringConfiguration() {
+      		System.out.println("容器初始化...");
+      	}
+      	
+      //	@Bean
+      //	@Scope("prototype")
+      //	public UserService userService() {
+      //		return new UserServiceImpl(1,"张三");
+      //	}
+      }
+      ```
+      
+      
+
+* @PropertySource
+
+  * 介绍
+    * 加载properties配置文件
+    * 编写在类上面
+    * 相当于context:property-placeholder标签
+  
+  * 属性
+
+    * value[]：用于指定properties文件路径，如果在类路径下，需要写上classpath
+  
+  * 示例代码
+  
+    * 配置类：
+  
+      ```java
+      @Configuration
+      @PropertySource(“classpath:jdbc.properties”)
+      public class JdbcConfig {
+      	@Value("${jdbc.driver}")
+      	private String driver;
+      	@Value("${jdbc.url}")
+      	private String url;
+      	@Value("${jdbc.username}")
+      	private String username;
+      	@Value("${jdbc.password}")
+      	private String password;
+      
+       /**
+      	 *	创建一个数据源，并存入 spring 容器中
+      	 *	@return
+      	**/
+      	@Bean(name="dataSource")
+      	public DataSource createDataSource() {
+      		try {
+      			ComboPooledDataSource ds = new ComboPooledDataSource(); 			
+            ds.setDriverClass(driver);
+            ds.setJdbcUrl(url); 
+            ds.setUser(username); 
+            ds.setPassword(password); return ds;
+      		} catch (Exception e) {
+      			throw new RuntimeException(e);
+      		}
+      	}
+      }
+      ```
+  
+    * properties文件：
+  
+      ```properties
+      jdbc.driver=com.mysql.jdbc.Driver 
+      jdbc.url=jdbc:mysql:///spring
+      jdbc.username=root 
+      jdbc.password=root
+      ```
+  
+    * 问题
+  
+      当系统中有多个配置类时怎么办呢？想一想之前使用XML配置的时候是如何解决该问题的。
+  
+* @Import
+
+  * 介绍
+
+    * 用来组合多个配置类
+    * 相当于spring配置文件中的import标签
+    * 在引入其他配置类时，可以不用再写@Configuration 注解。当然，写上也没问题。
+
+  * 属性
+
+    * value：用来指定其他配置类的字节码文件
+
+  * 示例代码
+
+    ```java
+    @Configuration
+    @ComponentScan(basePackages = "com.kkb.spring")
+    @Import({ JdbcConfig.class})
+    public class SpringConfiguration {
+    }
+    
+    @Configuration
+    @PropertySource("classpath:jdbc.properties")
+    public class JdbcConfig{
+    }
+    ```
+
   
 
+* 通过注解获取容器
+
+  * Java应用
+
+    ```java
+    ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+    UserService service = context.getBean(UserService.class);
+    service.saveUser();
+    ```
+
+  * Web应用（AnnotationConfigWebApplicationContext，后面讲解）
+
+    ```xml
+    <web-app>
+        <context-param>
+            <param-name>contextClass</param-name>
+            <param-value>
+                org.springframework.web.context.
+                support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </context-param>
+        <context-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                com.kkb.spring.test.SpringConfiguration
+            </param-value>
+        </context-param>
+        <listener>
+            <listener-class>
+                org.springframework.web.context.ContextLoaderListener
+            </listener-class>
+        </listener>
+    </web-app>
+    ```
+
+
+
+# 8.Spring 分模块开发
+
+略
+
+
+
+## 9.IOC和DI总结
+
+略
+
+
+
+## 10.Spring 整合 Junit
+
+略
+
+
+
+## 11.Spring AOP 原理分析
+
+#### 一. 简介
+
+* 在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向**切面**编程
+* AOP是一种编程范式，隶属于软工范畴，指导开发者如何组织程序结构
+* AOP最早由**AOP联盟的组织提出**的,制定了一套规范.Spring将AOP思想引入到框架中,必须遵守AOP联盟的规范
+* 通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术
+* AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型
+* 利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率
+
+#### 二.为什么使用AOP
+
+1. 作用
+   * AOP采取横向抽取机制，补充了传统纵向继承体系（OOP）无法解决的重复性代码优化（性能监视、事务管理、安全检查、缓存）
+   * **将业务逻辑和系统处理的代码（关闭连接、事务管理、操作日志记录）解耦。**
+2. 
 

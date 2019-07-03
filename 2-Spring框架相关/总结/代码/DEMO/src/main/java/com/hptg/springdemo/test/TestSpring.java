@@ -24,12 +24,12 @@ public class TestSpring {
         service2.saveUser();
     }
 
-    // Test2: 基于XML的Component Scan的例子
+    // Test2: 基于XML的Component-Scan的例子
     @Test
     public void test2() {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService service1 = context.getBean(UserServiceImpl2.class);
-        UserService service2 = (UserService) context.getBean("userServiceImpl2");
+        UserService service2 = (UserService) context.getBean("UserServiceImpl2");
         service1.saveUser();
         service2.saveUser();
     }

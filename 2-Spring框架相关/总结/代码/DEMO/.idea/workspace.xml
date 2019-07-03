@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f71f3ff1-a265-4b09-96e7-43e3f42d34ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/spring-demo1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/spring-demo1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/src/main/java/com/kkb/spring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/src/main/java/com/kkb/spring/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/src/main/java/com/kkb/spring/test/TestSpringIoC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo1/src/main/java/com/kkb/spring/test/TestSpringIoC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo3/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo3/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo3/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo3/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo3/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo3/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.7.29讲义和代码/code/spring-demo3/target/classes/META-INF/maven/com.kkb/spring-demo1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/springdemo/service/UserServiceImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/springdemo/service/UserServiceImpl2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/springdemo/test/TestSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/springdemo/test/TestSpring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/service/UserServiceImpl2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/service/UserServiceImpl2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/TestSpring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/TestSpring.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../文档/README2.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../文档/README2.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/springdemo/test/TestSpring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            <state relative-caret-position="210">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,6 +98,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -109,11 +110,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -134,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestSpring.test1 (1)">
+  <component name="RunManager" selected="JUnit.TestSpring.test2">
     <configuration name="TestSpring.test1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DEMO" />
       <extension name="coverage">
@@ -167,8 +168,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestSpring.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DEMO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hptg.springdemo.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hptg.springdemo.test" />
+      <option name="MAIN_CLASS_NAME" value="com.hptg.springdemo.test.TestSpring" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestSpring.test2" />
         <item itemvalue="JUnit.TestSpring.test1 (1)" />
         <item itemvalue="JUnit.TestSpring.test1" />
       </list>
@@ -194,12 +212,15 @@
     <history-entry file="TestSpring_test1_(1) - 2019.07.02 at 19h 45m 30s.xml">
       <configuration name="TestSpring.test1 (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestSpring_test2 - 2019.07.02 at 22h 23m 49s.xml">
+      <configuration name="TestSpring.test2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25178713" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -231,20 +252,20 @@
     <entry file="file://$PROJECT_DIR$/DEMO.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/springdemo/test/TestSpring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/springdemo/test/TestSpring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

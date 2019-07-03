@@ -1,5 +1,6 @@
 package com.hptg.springdemo.service;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +14,13 @@ import org.springframework.stereotype.Controller;
 //默认的bean的id就是类名首字母小写，比如这个类的bean的id是userServiceImpl
 //@Component
 //@Service
-@Controller
+@Controller("UserServiceImpl2")
 public class UserServiceImpl2 implements UserService {
 
-    @Autowired(required = false)
-    @Qualifier("date")
-    // @Resource
+    
+
+    @Autowired(required = true)
+    @Qualifier(value = "06-10-2019" fa)
     private Date date;
 
     // 简单类型的注入（配合properties文件使用）
@@ -27,6 +29,8 @@ public class UserServiceImpl2 implements UserService {
 
     @Override
     public void saveUser() {
-        System.out.println("IoC 演示 之UserService" + "  :  " + id);
+        
+        System.out.println(date);
+        System.out.println("IoC 演示 之UserService2 + id: " + id);
     }
 }
