@@ -293,4 +293,236 @@ l  **Spring容器：指的就是IoC容器。**
     
 
 ## 四.Spring IoC基于XML的使用
+#### 1.具体例子
+
+1. XML准备
+
+   ```xml
+   略
+   ```
+
+2. 具体实现（接口+实现类+XML）
+
+   接口：
+
+   ```java
+   public interface UserService { void saveUser();}
+   ```
+
+   实现类：
+
+   ```java
+   public class UserServiceImpl implements UserService {
+     @Override
+     public void saveUser() { 
+       // do something 
+     }
+   }
+   ```
+
+   XML:
+
+   <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/IOC34.png" width = 50% align=left />
+
+   测试：
+
+   <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/IOC35.png" width = 50% align=left />
+
+#### 2.Bean 标签详解
+
+略
+
+
+
+## 五.Spring DI(依赖注入)介绍
+
+#### 1.概述
+
+**什么是依赖？**
+
+* 依赖指的就是Bean实例中的**属性**
+* 属性分为：简单类型（8种基本类型和String类型）的属性、POJO类型的属性、集合数组类型的属性。
+
+**什么是依赖注入**
+
+* 依赖注入：Dependency Injection。它是 spring 框架核心 ioc 的具体实现。
+
+**为什么要进行依赖注入？**
+
+* 我们的程序在编写时，通过控制反转，把对象的创建交给了 spring，但是代码中不可能出现没有依赖的情况。
+* ioc 解耦只是降低他们的依赖关系，但不会消除。例如：我们的业务层仍会调用持久层的方法。那这种业务层和持久层的依赖关系，在使用 spring 之后，就让 spring 来维护了。
+* 简单的说，就是坐等框架把持久层对象传入业务层，而不用我们自己去获取。
+
+#### 2. 依赖注入的方式
+
+1. **构造函数的注入**
+
+   顾名思义，就是使用类中的构造函数，给成员变量赋值。
+
+   ```java
+   public class UserServiceImpl implements UserService {
+   	private int id;
+   	private String name;
+   	
+   	public UserServiceImpl(int id, String name) {
+   		this.id = id;
+   		this.name = name;
+   	}
+   	@Override
+   	public void saveUser() {
+   		System.out.println("保存用户:id为"+id+"，name为"+name+"   Service实现");
+   	}
+   }
+   ```
+
+2. **set方法注入（重点）**
+
+   set方法注入**又分为**手动装配方式注入**和**自动装配方式注入。
+
+   * 手动装配方式（XML方式）：bean标签的子标签property，需要在类中指定set方法。
+
+   * 自动装配方式（注解方式，后面讲解）：@Autowired注解、@Resource注解。
+     * @Autowired：一部分功能是**查找实例**，从spring容器中根据类型（java类）获取对应的实例。另一部分功能就是**赋值**，将找到的实例，装配给另一个实例的属性值。（注意事项：一个java类型在同一个spring容器中，只能有一个实例）
+     * @Resource：一部分功能是**查找实例**，从spring容器中根据Bean的名称（bean标签的名称）获取对应的实例。另一部分功能就是**赋值**，将找到的实例，装配给另一个实例的属性值。
+
+#### 3.依赖注入不同类型的属性
+
+* 简单类型
+
+  ```xml
+  <bean id="userService" class="com.kkb.spring.service.UserServiceImpl">
+  		<property name="id" value="1"></property>
+  		<property name="name" value="zhangsan"></property>
+  </bean>
+  ```
+
+* 引用类型
+
+  ```xml
+  ref就是reference的缩写，是引用的意思。
+  <bean id="userService" class="com.kkb.spring.service.UserServiceImpl">
+  		<property name="userDao" ref="userDao"></constructor-arg>
+  </bean>
+  <bean id="userDao" class="com.kkb.spring.dao.UserDaoImpl"></bean>
+  ```
+
+* 集合类型
+
+  ```xml
+  1. 如果是数组或者List集合，注入配置文件的方式是一样的
+      <bean id="collectionBean" class="com.kkb.demo5.CollectionBean">
+          <property name="arrs">
+              <list>
+  				//如果集合内是简单类型，使用value子标签，如果是POJO类型，则使用bean标签
+                  <value>美美</value>
+                  <value>小风</value>
+  				<bean></bean>
+              </list>
+          </property>
+      </bean>
+  
+  2. 如果是Set集合，注入的配置文件方式如下：
+      <property name="sets">
+          <set>
+  			//如果集合内是简单类型，使用value子标签，如果是POJO类型，则使用bean标签
+              <value>哈哈</value>
+              <value>呵呵</value>
+          </set>
+      </property>
+  
+  3. 如果是Map集合，注入的配置方式如下：
+      <property name="map">
+          <map>
+              <entry key="老王2" value="38"/>
+              <entry key="凤姐" value="38"/>
+              <entry key="如花" value="29"/>
+          </map>
+      </property>
+  
+  4. 如果是Properties集合的方式，注入的配置如下：
+      <property name="pro">
+          <props>
+              <prop key="uname">root</prop>
+              <prop key="pass">123</prop>
+          </props>
+      </property>
+  ```
+
+
+
+## 6 Spring IOC 和 DI 基于注解(Annotation)使用
+
+#### 1. IOC注解使用
+
+* 第一步：Spring配置文件中，配置context:component-scan标签
+
+  <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/IOC36.png" width = 80% align=left />
+
+* 第二步：类上面加上注解@Component，或者它的衍生注解**@Controller、@Service、@Repository**
+
+  <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/IOC37.png" width = 50% align=left />
+
+#### 2.常用注解
+
+1. IOC 注解（创建对象，相当于：<bean id="" class="">）
+
+   * @Component注解
+   * @Controller、@Service、@Repository注解
+
+2. DI注解（依赖注入）
+
+  以下相当于：<property name="" ref="">
+  
+  * @Autowired
+  * @Qualifier
+  * @Resource
+  
+  以下相当于：**<property name="" value="">**
+  
+  * @Value
+  
+3. 改变作用范围
+
+   * @Scope（相当于<bean id="" class="" scope="">）
+   
+4. 和生命周期相关
+
+   * @PostConstruct和@PreDestroy（相当于：<bean id="" class="" init-method="" destroy-method="" />）
+
+
+
+## 7.Spring的纯注解配置
+
+前言：写到此处，基于注解的 IoC 配置已经完成，但是大家都发现了一个问题：我们依然离不开 spring 的 xml 配置文件，那么能不能**不写**这个 applicationContext.xml，所有配置都用注解来实现呢？
+
+之前的：
+
+* 注解扫描配置（能不能去掉）
+
+  ```xml
+  <!-- 开启注解并扫描指定包中带有注解的类 -->
+  <context:component-scan base-package="com.kkb.spring.service"/>
+  ```
+
+* 非自定义的Bean配置（比如：SqlSessionFactory和BasicDataSource配置）
+
+  ```xml
+  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+  	<property name="dataSource" value="dataSource"></property>
+  </bean>
+  ```
+
+* 去掉XML后，如何创建ApplicationContext
+
+  ```Java
+  //之前创建ApplicationContext都是通过读取XML文件进行创建的。
+  ApplicationContext context = new ClassPathXmlApplicationContext(“beans.xml”);
+  ```
+
+#### 1. 新的注解
+
+* @Configuration（相当于<beans>根标签）
+
+  
+
 
