@@ -108,79 +108,68 @@ l  **Spring容器：指的就是IoC容器。**
 
      ```java
      @Override
-     	public void refresh() throws BeansException, IllegalStateException {
-     		synchronized (this.startupShutdownMonitor) {
-     			//1、 Prepare this context for refreshing.
-     			prepareRefresh();
-     			//创建DefaultListableBeanFactory（真正生产和管理bean的容器）
-           //加载BeanDefition并注册到BeanDefitionRegistry
-           //通过NamespaceHandler解析自定义标签的功能（比如:context标签、aop标签、tx标签）
-     			//2、 Tell the subclass to refresh the internal bean factory.
-     			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
-     
-     			//3、 Prepare the bean factory for use in this context.
-     			prepareBeanFactory(beanFactory);
-     
-     			try {
-     				//4、 Allows post-processing of the bean factory in context subclasses.
-     				postProcessBeanFactory(beanFactory);
-           	//实例化并调用实现了BeanFactoryPostProcessor接口的Bean
-     	      //比如：PropertyPlaceHolderConfigurer（context:property-placeholer）
-       			//就是此处被调用的，作用是替换掉BeanDefinition中的占位符（${}）中的内容
-     				//5、 Invoke factory processors registered as beans in the context.
-     				invokeBeanFactoryPostProcessors(beanFactory);
-             //创建并注册BeanPostProcessor到BeanFactory中（Bean的后置处理器）
-     				//比如：AutowiredAnnotationBeanPostProcessor（实现@Autowired注解功能）
-             //RequiredAnnotationBeanPostProcessor（实现@d注解功能）
-             //这些注册的BeanPostProcessor
-     				//6、 Register bean processors that intercept bean creation.
-     				registerBeanPostProcessors(beanFactory);
-     
-     				//7、 Initialize message source for this context.
-     				initMessageSource();
-     
-     				//8、 Initialize event multicaster for this context.
-     				initApplicationEventMulticaster();
-     
-     				//9、 Initialize other special beans in specific context subclasses.
-     				onRefresh();
-     
-     				//10、 Check for listener beans and register them.
-     				registerListeners();
-     
-             //创建非懒加载方式的单例Bean实例（未设置属性）
-             //填充属性
-             //初始化实例（比如调用init-method方法）
-             //调用BeanPostProcessor（后置处理器）对实例bean进行后置处理
-     				//11、 Instantiate all remaining (non-lazy-init) singletons.
-     				finishBeanFactoryInitialization(beanFactory);
-     
-     				//12、 Last step: publish corresponding event.
-     				finishRefresh();
-     			}
-     			catch (BeansException ex) {
-     				// Destroy already created singletons to avoid dangling resources.
-     				destroyBeans();
-     
-     				// Reset 'active' flag.
-     				cancelRefresh(ex);
-     				// Propagate exception to caller.
-     				throw ex;
-     			}
-     
-     			finally {
-     				// Reset common introspection caches in Spring's core, since we
-     				// might not ever need metadata for singleton beans anymore...
-     				resetCommonCaches();
-     			}
+     public void refresh() throws BeansException, IllegalStateException {
+     	synchronized (this.startupShutdownMonitor) {
+     		//1、 Prepare this context for refreshing.
+         prepareRefresh();
+     		//创建DefaultListableBeanFactory（真正生产和管理bean的容器）
+         //加载BeanDefition并注册到BeanDefitionRegistry
+         //通过NamespaceHandler解析自定义标签的功能（比如:context标签、aop标签、tx标签）
+     		//2、 Tell the subclass to refresh the internal bean factory.
+     		ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
+     		//3、 Prepare the bean factory for use in this context.
+         prepareBeanFactory(beanFactory);
+     		try {
+           //4、 Allows post-processing of the bean factory in context subclasses.
+     			postProcessBeanFactory(beanFactory);
+           //实例化并调用实现了BeanFactoryPostProcessor接口的Bean
+     	    //比如：PropertyPlaceHolderConfigurer（context:property-placeholer）
+       		//就是此处被调用的，作用是替换掉BeanDefinition中的占位符（${}）中的内容
+     			//5、 Invoke factory processors registered as beans in the context.
+     			invokeBeanFactoryPostProcessors(beanFactory);
+           //创建并注册BeanPostProcessor到BeanFactory中（Bean的后置处理器）
+     			//比如：AutowiredAnnotationBeanPostProcessor（实现@Autowired注解功能）
+         	//RequiredAnnotationBeanPostProcessor（实现@d注解功能）
+           //这些注册的BeanPostProcessor
+     			//6、 Register bean processors that intercept bean creation.
+     			registerBeanPostProcessors(beanFactory);
+           //7、 Initialize message source for this context.
+     			initMessageSource();
+     			//8、 Initialize event multicaster for this context.
+     			initApplicationEventMulticaster();
+     			//9、 Initialize other special beans in specific context subclasses.
+     			onRefresh();
+     			//10、 Check for listener beans and register them.
+     			registerListeners();
+     			//创建非懒加载方式的单例Bean实例（未设置属性）
+           //填充属性
+           //初始化实例（比如调用init-method方法）
+           //调用BeanPostProcessor（后置处理器）对实例bean进行后置处理
+     			//11、 Instantiate all remaining (non-lazy-init) singletons.
+     			finishBeanFactoryInitialization(beanFactory);
+     			//12、 Last step: publish corresponding event.
+     			finishRefresh();
      		}
-     	}  
+     		catch (BeansException ex) {
+           // Destroy already created singletons to avoid dangling resources.
+     			destroyBeans();
+     			// Reset 'active' flag.
+     			cancelRefresh(ex);
+     			// Propagate exception to caller.
+     			throw ex;
+         }finally {
+           // Reset common introspection caches in Spring's core, since we
+     			// might not ever need metadata for singleton beans anymore...
+     			resetCommonCaches();
+         }
+       }
+     }  
      ```
-
+     
   4. 总结起来：
-
+  
      <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/IOC9.png" width=55% align=left />
-
+  
 * 创建BeanFactory流程分析
 
   * 获取新的BeanFactory子流程
