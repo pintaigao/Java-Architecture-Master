@@ -380,8 +380,8 @@ l  **Spring容器：指的就是IoC容器。**
 
   ```xml
   <bean id="userService" class="com.kkb.spring.service.UserServiceImpl">
-  		<property name="id" value="1"></property>
-  		<property name="name" value="zhangsan"></property>
+  	<property name="id" value="1"></property>
+  	<property name="name" value="zhangsan"></property>
   </bean>
   ```
 
@@ -400,40 +400,40 @@ l  **Spring容器：指的就是IoC容器。**
   ```xml
   1. 如果是数组或者List集合，注入配置文件的方式是一样的
       <bean id="collectionBean" class="com.kkb.demo5.CollectionBean">
-          <property name="arrs">
-              <list>
+        <property name="arrs">
+          <list>
   				//如果集合内是简单类型，使用value子标签，如果是POJO类型，则使用bean标签
-                  <value>美美</value>
-                  <value>小风</value>
-  				<bean></bean>
-              </list>
-          </property>
+          	<value>美美</value>
+            <value>小风</value>
+  					<bean></bean>
+          </list>
+        </property>
       </bean>
   
   2. 如果是Set集合，注入的配置文件方式如下：
       <property name="sets">
-          <set>
+        <set>
   			//如果集合内是简单类型，使用value子标签，如果是POJO类型，则使用bean标签
-              <value>哈哈</value>
-              <value>呵呵</value>
-          </set>
+        	<value>哈哈</value>
+  	      <value>呵呵</value>
+        </set>
       </property>
   
   3. 如果是Map集合，注入的配置方式如下：
       <property name="map">
-          <map>
-              <entry key="老王2" value="38"/>
-              <entry key="凤姐" value="38"/>
-              <entry key="如花" value="29"/>
-          </map>
+        <map>
+        	<entry key="老王2" value="38"/>
+          <entry key="凤姐" value="38"/>
+          <entry key="如花" value="29"/>
+        </map>
       </property>
   
   4. 如果是Properties集合的方式，注入的配置如下：
       <property name="pro">
-          <props>
-              <prop key="uname">root</prop>
-              <prop key="pass">123</prop>
-          </props>
+        <props>
+        	<prop key="uname">root</prop>
+          <prop key="pass">123</prop>
+        </props>
       </property>
   ```
 
