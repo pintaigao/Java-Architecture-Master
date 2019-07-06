@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- DEMO6：基于XML的Spring AOP的基本使用方法 -->
+    <!-- 配置目标对象 -->
+    <bean class="com.hptg.springdemo.service.UserServiceImpl6" />
+    <!-- 配置通知类 -->
+    <bean id="myAdvice" class="com.hptg.springdemo.advice.MyAdvice" />
+
+    <!-- AOP配置 -->
+    <aop:config>
+        <!-- 配置AOP切面，切面是由通知和切入点组成的 -->
+        <!--<aop:advisor advice-ref="" pointcut=""/>-->
+        <aop:aspect ref="myAdvice">
+            <!-- before：前置通知 -->
+            <!-- pointcut:编写切入点表达式 ,去定位需要切入的方法是哪个 -->
+            <!-- method：增强类中的方法 -->
+            <aop:before method="log" pointcut="execution(void com.hptg.springdemo.service.UserServiceImpl6.saveUser(String))"/>
+            <aop:after-returning method="log2" pointcut="execution(void com.hptg.springdemo.service.UserServiceImpl6.saveUser())"/>
+            <!--after-returning 之后 after 最终通知 -->
+            <aop:after method="log3" pointcut="execution(void com.hptg.springdemo.service.UserServiceImpl6.saveUser())"/>
+            <aop:after-throwing method="log4" pointcut="execution(void com.hptg.springdemo.service.UserServiceImpl6.saveUser())"/>
+            <!--around:环绕通知-->
+            <aop:around method="log5" pointcut="execution(void *..*.*ServiceImpl6.*(..))" />
+            <!-- pointcut="execution(void com.kkb.spring.service.UserService.saveUser())" /> -->
+        </aop:aspect>
+    </aop:config>
+</beans>

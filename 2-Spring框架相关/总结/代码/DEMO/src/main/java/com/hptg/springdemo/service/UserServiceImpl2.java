@@ -17,20 +17,16 @@ import org.springframework.stereotype.Controller;
 @Controller("UserServiceImpl2")
 public class UserServiceImpl2 implements UserService {
 
-    
-
-    @Autowired(required = true)
-    @Qualifier(value = "06-10-2019" fa)
-    private Date date;
+//    @Autowired(required = true)
+//    @Qualifier(value = "06-10-2019" fa)
+//    private Date date;
 
     // 简单类型的注入（配合properties文件使用）
     @Value("${id}")
-    private int id;
+    private String id;
 
     @Override
     public void saveUser() {
-        
-        System.out.println(date);
-        System.out.println("IoC 演示 之UserService2 + id: " + id);
+        System.out.println("IoC 演示 之UserService2 + id: " + this.id);
     }
 }

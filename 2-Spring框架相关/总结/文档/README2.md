@@ -786,5 +786,228 @@ l  **Spring容器：指的就是IoC容器。**
 1. 作用
    * AOP采取横向抽取机制，补充了传统纵向继承体系（OOP）无法解决的重复性代码优化（性能监视、事务管理、安全检查、缓存）
    * **将业务逻辑和系统处理的代码（关闭连接、事务管理、操作日志记录）解耦。**
+   
+2. 优势
+
+   * 重复性代码被抽取出来之后，维护更加方便
+
+3. 纵向继承体系
+
+   <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/IOC38.png" width = 70% align=left />
+
+4. 横向抽取机制：
+
+   <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/IOC39.png" width = 60% align=left />
+
+   
+
+#### 三.AOP相关术语介绍
+
+1. 术语解释
+
+   * **Joinpoint(连接点)**   -- 所谓连接点是指那些被拦截到的点。在spring中,这些点指的是方法,因为spring只支持方法类型的连接点
+
+   * **Pointcut(切入点)**        -- 所谓切入点是指我们要对哪些Joinpoint进行拦截的定义
+
+   * **Advice(通知/增强)**    -- 所谓通知是指拦截到Joinpoint之后所要做的事情就是通知.通知分为前置通知,后置通知,异常通知,最终通知,环绕通知(切面要完成的功能)
+
+   * **Introduction(引介)** -- 引介是一种特殊的通知在不修改类代码的前提下, Introduction可以在运行期为类动态地添加一些方法或Field
+
+   * **Target(目标对象)**     -- 代理的目标对象
+
+   * **Weaving(织入)**      -- 是指把增强应用到目标对象来创建新的代理对象的过程
+
+   * **Proxy（代理）**       -- 一个类被AOP织入增强后，就产生一个结果代理类
+
+   * **Aspect(切面)**        -- 是切入点和通知的结合，以后咱们自己来编写和配置的
+
+   * **Advisor（通知器、顾问）**          --和Aspect很相似
+
+     <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/AOP1.png" width = 90% align=left />
+
+2. AOP实现之Spring AOP
+
+   略
+
+
+
+## 12.Spring基于AspectJ的AOP使用
+
+其实就是指的Spring + AspectJ整合，不过Spring已经将AspectJ收录到自身的框架中了。
+
+#### 一.开发
+
+1. 编写通知（增强类，一个普通的类）
+
+   ```java
+   public class MyAdvice {
+       //演示前置通知
+       public void log() {
+           System.out.println("开始记录日志了...");
+       }
+   }
+   ```
+
+2. **配置通知，将通知类交给spring IoC容器管理**
+
+   ```xml
+   <bean id="myAdvice" class="com.hptg.springdemo.advice.MyAdvice" />
+   ```
+
+3. **配置AOP 切面**
+
+   <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/AOP2.png" width = 60% align=left />
+
+4. 切入点表达式
+
+   <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/AOP3.png" width = 70% align=left />
+
+#### 二.通知类型
+
+* 通知类型（五种）：前置通知、后置通知、最终通知、环绕通知、异常抛出通知。
+* 前置通知：
+
+  * 执行时机：目标对象方法之前执行通知
+
+  * 配置文件：<aop:before method="before" pointcut-ref="myPointcut"/>
+
+  * 应用场景：方法开始时可以进行校验
+* 后置通知：
+  * 执行时机：目标对象方法之后执行通知，**有异常则不执行了**
+  * 配置文件：<aop:after-returning method="afterReturning" pointcut-ref="myPointcut"/>
+  * 应用场景：可以修改方法的返回值
+
+* 最终通知：
+  * 执行时机：目标对象方法之后执行通知，**有没有异常都会执行**
+  * 配置文件：<aop:after method="after" pointcut-ref="myPointcut"/>
+  * 应用场景：例如像释放资源
+
+* 环绕通知：
+  * 执行时机：目标对象方法之前和之后都会执行。
+  * 配置文件：<aop:around method="around" pointcut-ref="myPointcut"/>
+  * 应用场景：事务、统计代码执行时机
+
+* 异常抛出通知：
+
+  * 执行时机：在抛出异常后通知
+
+  * 配置文件：<aop:after-throwing method=" afterThrowing " pointcut- ref="myPointcut"/>
+
+  * 应用场景：包装异常
+
+    
+
+#### 三.使用注解实现
+
+* 编写切面类
+
+  <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/AOP4.png" width = 50% align=left />
+
+* **配置切面类**
+
+  ```xml
+  <context:component-scan base-package="com.kkb.spring"/>
+  ```
+
+* 开启AOP自动代理
+
+  ```xml
+  <aop:aspectj-autoproxy />
+  ```
+
+* 环绕通知注解配置
+
+  **@Around**
+
+  * 作用：把当前方法看成是环绕通知。
+
+  * 属性：value：用于指定切入点表达式，还可以指定切入点表达式的引用。
+
+    <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/AOP5.png" width = 50% align=left />
+
+* 定义通用切入点
+
+  **使用@PointCut注解在切面类中定义一个通用的切入点，其他通知可以引用该切入点**
+
+  <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/AOP6.png" width = 50% align=left />
+
+#### 四.纯注解的Spring AOP配置
+
+```java
+@Configuration
+@ComponentScan(basePackages="com......")
+@EnableAspectJAutoProxy
+public class SpringConfiguration {
+  // ...do something
+}
+```
+
+
+
+## 13.Spring AOP 源码解析
+
+<img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/AOP7.png" width = 80% align=left />
+
+
+
+## 14.Spring应用之Spring JDBC实现
+
+#### 一.Spring管理JdbcTemplate
+
+1. Spring管理内置的连接池
+
+   ```xml
+   <bean id="dataSource"class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+   	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+     <property name="url" value="jdbc:mysql:///spring_day03"/>
+     <property name="username" value="root"/>
+     <property name="password" value="root"/>
+   </bean>
+   ```
+
+2. Spring管理模版类
+
+   ```xml
+   <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+   	<property name="dataSource" ref="dataSource"/>
+   </bean>
+   ```
+
+3. 编写测试程序
+
+   ```java
+   @RunWith(SpringJUnit4ClassRunner.class)
+   @ContextConfiguration("classpath:applicationContext.xml")
+   public class Demo2 {
+     @Resource(name="jdbcTemplate")
+     private JdbcTemplate jdbcTemplate;
+   	@Test
+     public void run(){
+     	jdbcTemplate.update("insert into t_account values (null,?,?)", "测试2",10000);
+      }
+   }
+   ```
+
+#### 二.Spring管理第三方DataSource
+
+1. 管理DBCP连接池
+
+   * 先引入DBCP的2个jar包
+
+   * 编写配置文件
+
+     ```xml
+     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+     	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+       <property name="url" value="jdbc:mysql:///spring "/>
+       <property name="username" value="root"/>
+       <property name="password" value="root"/>
+     </bean>
+     ```
+
 2. 
+
+
+
+
 
