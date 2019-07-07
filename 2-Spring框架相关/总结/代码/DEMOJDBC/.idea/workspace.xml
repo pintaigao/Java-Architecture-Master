@@ -73,7 +73,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/springdemo/test/TestJdbcTemplate2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
+            <state relative-caret-position="402">
               <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
             </state>
           </provider>
@@ -240,6 +240,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
@@ -386,9 +387,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestJdbcTemplate_test - 2019.07.06 at 15h 58m 41s.xml">
-      <configuration name="TestJdbcTemplate.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestJdbcTemplate_test - 2019.07.06 at 15h 59m 09s.xml">
       <configuration name="TestJdbcTemplate.test" configurationId="JUnit" />
     </history-entry>
@@ -416,6 +414,9 @@
     <history-entry file="TestJdbcTemplate2_test - 2019.07.06 at 18h 42m 12s.xml">
       <configuration name="TestJdbcTemplate2.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestJdbcTemplate2_test2 - 2019.07.06 at 18h 49m 11s.xml">
+      <configuration name="TestJdbcTemplate2.test2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="986" extended-state="0" />
@@ -434,7 +435,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32997763" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32997763" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32997763" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -523,7 +524,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/springdemo/test/TestJdbcTemplate2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
+        <state relative-caret-position="402">
           <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
         </state>
       </provider>

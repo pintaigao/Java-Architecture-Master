@@ -1064,7 +1064,287 @@ class BeanMapper implements RowMapper<Account>{
 
 
 
+#### 四. Spring DAO 开发之JdbcDAOSupport
+
+1.  案例设计
+
+    *   编写转账案例（包括业务层和持久层）
+    *   编写DAO时引入JdbcDaoSupport的使用
+
+2.  实现
+
+    *   步骤一：创建WEB工程，引入需要的jar包
+
+        ```
+        略
+        ```
+
+    *   步骤二：引入配置文件
+
+        ```xml
+        * 引入log4j.properties
+        * 引入applicationContext.xml
+        <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        	<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+          <property name="jdbcUrl" value="jdbc:mysql:///spring "/>
+          <property name="user" value="root"/>
+          <property name="password" value="root"/>
+        </bean>
+        ```
+
+    *   步骤三：创建对应的包结构和类
+
+        ```
+        AccountService
+        AccountServlceImpl
+        AccountDao
+        AccountDaoImpl
+        ```
+
+    *   步骤四：引入Spring的配置文件，将类配置到Spring中
+
+        ```xml
+        <bean id="accountService" class="com.kkb.demo1.AccountServiceImpl">
+        </bean>
+        <bean id="accountDao" class="com.kkb.demo1.AccountDaoImpl">
+        </bean>
+        ```
+
+    *   步骤五：在业务层注入DAO，在DAO中注入JDBC模版（强调：简化开发，以后DAO可以继承JdbcDaoSupport类）
+
+        ```xml
+        <bean id="accountService" class="com.kkb.demo1.AccountServiceImpl">
+        	<property name="accountDao" ref="accountDao"/>
+        </bean>
+        <bean id="accountDao" class="com.kkb.demo1.AccountDaoImpl">
+        	<property name="dataSource" ref="dataSource"/>
+        </bean>
+        ```
+
+    *   步骤六：编写DAO和Service中的方法
+
+        ```java
+        public class AccountDaoImpl extends JdbcDaoSupport implements AccountDao {
+          public void outMoney(String out, double money) {
+            this.getJdbcTemplate().update("update t_account set money = money = ? where name = ?", money,out);
+          }
+          public void inMoney(String in, double money) {
+            this.getJdbcTemplate().update("update t_account set money = money + ? where name = ?", money,in);
+          }
+        }
+        ```
+
+    *   步骤七：编写测试程序.
+
+        ```java
+        @RunWith(SpringJUnit4ClassRunner.class)
+        @ContextConfiguration("classpath:applicationContext.xml")
+        public class Demo1 {
+          @Resource(name="accountService")
+          private AccountService accountService; 
+          @Test
+          public void run1(){
+          	accountService.pay("冠希", "美美", 1000);
+          }
+        }
+        ```
 
 
 
+## 15. Spring 应用之事务支持
+
+#### 一.事务介绍
+
+1.  事务：指的是逻辑上一组操作，组成这个事务的各个执行单元，要么一起成功,要么一起失败！
+2.  事务的特性（ACID）
+
+*   原子性（Atomicity）
+
+    原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。
+
+*  一致性（Consistency）
+
+    一致性是指事务必须使数据库从一个一致性状态变换到另一个一致性状态，也就是说一个事务执行之前和执行之后都必须处于一致性状态。
+
+    拿转账来说，假设用户A和用户B两者的钱加起来一共是5000，那么不管A和B之间如何转账，转几次账，事务结束后两个用户的钱相加起来应该还得是5000，这就是事务的一致性。
+
+*  隔离性（Isolation）
+
+    隔离性是当多个用户并发访问数据库时，比如操作同一张表时，数据库为每一个用户开启的事务，不能被其他事务的操作所干扰，多个并发事务之间要相互隔离。
+
+*  持久性（Durability）
+
+    持久性是指一个事务一旦被提交了，那么对数据库中的数据的改变就是永久性的，即便是在数据库系统遇到故障的情况下也不会丢失提交事务的操作。
+
+3.  事务并发问题（隔离性导致）
+
+  在事务的**并发操作**中可能会出现一些问题：
+
+  *   脏读：一个事务读取到另一个事务未提交的数据。
+  *   不可重复读：一个事务因读取到另一个事务**已提交的数据**。导致*对同一条记录读取*两次以上的结果不一致。**update**操作
+  *   幻读：一个事务因读取到另一个事务**已提交的数据**。导致*对同一张表读取*两次以上的结果不一致。**insert**、delete操作
+  
+4.  事务隔离级别
+
+*   为了避免上面出现的几种情况，在标准SQL规范中，定义了**4****个事务隔离级别**，不同的隔离级别对事务的处理不同**
+  
+*   四种隔离级别：
+  
+    现在来看看MySQL数据库为我们提供的四种隔离级别（*由低到高*）：
+  
+    *   Read uncommitted (读未提交)：最低级别，任何情况都无法保证。
+  *    Read committed (读已提交)：可避免脏读的发生。
+    *   Repeatable read (可重复读)：可避免脏读、不可重复读的发生。
+  *   Serializable (串行化：可避免脏读、不可重复读、幻读的发生。
+  
+*   注意事项
+
+    *隔离级别越高，越能保证数据的完整性和一致性，但是对并发性能的影响也越大。*
+
+    对于多数应用程序，可以优先考虑把数据库系统的隔离级别设为Read Committed。它能够避免脏读取，而且具有较好的并发性能。尽管它会导致不可重复读、幻读这些并发问题，在可能出现这类问题的个别场合，可以由应用程序采用悲观锁或乐观锁来控制。
+
+#### 二. Spring 框架的事务管理相关的类和API
+
+**Spring并不直接管理事务，而是提供了多种事务管理器，他们将事务管理的职责委托给Hibernate或者JTA等持久化机制所提供的相关平台框架的事务来实现。 Spring事务管理器的接口是PlatformTransactionManager，通过这个接口，Spring为各个平台如JDBC、Hibernate等都提供了对应的事务管理器，但是具体的实现就是各个平台自己的事情了。**
+
+<img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/JDBC1.png" width = 80% align=left />
+
+1.  **PlatformTransactionManager接口**
+
+    平台事务管理器.(真正管理事务的类)。该接口有具体的实现类，根据不同的持久层框架，需要选择不同的实现类！ 
+
+2.  TransactionDefinition接口：事务定义信息.(事务的隔离级别,传播行为,超时,只读)
+
+3.  TransactionStatus接口：事务的状态（是否新事务、是否已提交、是否有保存点、是否回滚）
+
+4.  总结：上述对象之间的关系：平台事务管理器真正管理事务对象.根据事务定义的信息TransactionDefinition 进行事务管理，在管理事务中产生一些状态.将状态记录到TransactionStatus中
+
+5.  PlatformTransactionManager接口中实现类和常用的方法
+
+    *   接口的实现类
+
+        *   如果使用的Spring的JDBC模板或者MyBatis（IBatis）框架，需要选择**DataSourceTransactionManager**实现类
+        *   如果使用的是Hibernate的框架，需要选择**HibernateTransactionManager**实现类
+
+    *   该接口的常用方法
+
+        ```java
+        void commit(TransactionStatus status) 
+        TransactionStatus getTransaction(TransactionDefinition definition) 
+        void rollback(TransactionStatus status) 
+        ```
+
+6.  TransactionDefinition
+
+    *   事务隔离级别的常量
+
+        ```java
+        static int ISOLATION_DEFAULT
+        static int ISOLATION_READ_UNCOMMITTED 
+        static int ISOLATION_READ_COMMITTED 
+        static int ISOLATION_REPEATABLE_READ 
+        static int ISOLATION_SERIALIZABLE 
+        ```
+
+    *   事务的传播行为常量（不用设置，使用默认值）
+
+        ```
+        * 先解释什么是事务的传播行为：解决的是业务层之间的方法调用！！
+        * PROPAGATION_REQUIRED（默认值） -- A中有事务,使用A中的事务.如果没有，B就会开启一个新的事务,将A包含进来.(保证A,B在同一个事务中)，默认值！！
+        * PROPAGATION_SUPPORTS          -- A中有事务,使用A中的事务.如果A中没有事务.那么B也不使用事务.
+        * PROPAGATION_MANDATORY         -- A中有事务,使用A中的事务.如果A没有事务.抛出异常.
+        * PROPAGATION_REQUIRES_NEW      -- A中有事务,将A中的事务挂起.B创建一个新的事务.(保证A,B没有在一个事务中)
+        * PROPAGATION_NOT_SUPPORTED     -- A中有事务,将A中的事务挂起.
+        * PROPAGATION_NEVER             -- A中有事务,抛出异常.
+        * PROPAGATION_NESTED            -- 嵌套事务.当A执行之后,就会在这个位置设置一个保存点.如果B没有问题.执行通过.如果B出现异常,运行客户根据需求回滚(选择回滚到保存点或者是最初始状态
+        ```
+
+#### 三. Spring框架事务管理的分类
+
+*   Spring的编程式事务管理（不推荐使用）: 通过手动编写代码的方式完成事务的管理（不推荐）
+
+*   Spring的声明式事务管理（底层采用AOP的技术）:通过一段配置的方式完成事务的管理
+
+    1.  声明式事务管理（重点）
+    
+        声明式事务管理又分成两种方式
+    
+        *   基于AspectJ的XML方式（重点掌握）
+        *   基于AspectJ的注解方式（重点掌握）
+
+#### 四. 事务管理之基于AspectJ的XML方式（重点掌握）
+
+1.  使用
+
+    准备转账环境：
+
+    *   业务层：（AccountService, AccountServiceImpl）
+
+        ```java
+        public void transfer(String in, String out, double money){
+          dao.outMoney(out, money);
+          // 异常代码
+          System.out.print(1/0);
+          dao.inMoney(in, money);
+        }
+        ```
+
+    *   持久层：（AccountDao, AccountDaoImpl）
+
+    *   Spring配置
+
+        <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/JDBC2.png" width = 80% align=left />
+
+    *   单元测试代码
+
+        ```java
+        @RunWith(SpringJUnit4ClassRunner.class)
+        @ContextConfiguration(locations = "classpath:applicationContext-tx.xml")
+        public class TransactionTest {
+          @AutoWired
+          private AccountService service;
+          
+          @Test
+          public void test01() {
+            service.transfer("李聪"， "李阳"， 100);
+          }
+        }
+        ```
+
+    配置事务管理的AOP
+
+    *   平台事务管理器:  DataSourceTransactionManager
+
+        ```xml
+        <bean id = "transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+          <property name="dataSource" ref="dataSource"></property>
+        </bean>
+        ```
+
+    *   事务通知：<<tx:advice id=”” transaction-manager=””/>
+
+        <img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/JDBC3.png" width = 70% align=left />
+
+    *   AOP配置：
+
+        ```xml
+        <aop:config>
+          <aop:advisor advice-ref=”txAdvice” pointcut=”execution(cn..service.*.*(..))”/>
+        </aop:config>
+        ```
+
+2.  源码分析
+
+    略
+
+#### 五.事务管理之基于AspectJ的注解方式（重点掌握）
+
+Service 类上或者方法上加注解
+
+*   类上加@Transactional: 表示该类中所有的方法被事务管理
+*   方法上加@Transactional：表示只有该方法被事务管理
+
+开启事务注解：
+
+<img src="/Users/hptg/Documents/Project/Spring/Java-Architecture-Master/2-Spring框架相关/总结/文档/图片/JDBC4.png" width = 70% align=left />
 
