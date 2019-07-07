@@ -1,10 +1,6 @@
 package com.hptg.springdemo.test;
 
-import com.hptg.springdemo.service.UserService;
 import com.hptg.springdemo.service.UserService2;
-import com.hptg.springdemo.service.UserServiceImpl1;
-import com.hptg.springdemo.service.UserServiceImpl6;
-import com.hptg.springdemo.utils.MyProxyUtils;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
