@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b50a1a9-6b26-4ef9-9cce-dc5897b02ae3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestJdbcTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kkb/spring/test/TestJdbcTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.kkb/spring-aop/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.kkb/spring-aop/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kkb/spring/dao/AccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kkb/spring/dao/AccountDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kkb/spring/dao/DoubleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kkb/spring/dao/DoubleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-transfer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-transfer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../总结/代码/DEMO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../总结/代码/DEMO/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../总结/代码/DEMO/src/main/java/com/hptg/springdemo/test/TestAOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../总结/代码/DEMO/src/main/java/com/hptg/springdemo/test/TestAOP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../总结/代码/DEMO/src/main/java/com/hptg/springdemo/test/TestAOPAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../总结/代码/DEMO/src/main/java/com/hptg/springdemo/test/TestAOPAnnotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../总结/代码/DEMO/target/classes/com/hptg/springdemo/test/TestAOP.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../总结/代码/DEMO/target/classes/com/hptg/springdemo/test/TestAOP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../总结/代码/DEMO/target/classes/com/hptg/springdemo/test/TestAOPAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../总结/代码/DEMO/target/classes/com/hptg/springdemo/test/TestAOPAnnotation.class" afterDir="false" />
-    </list>
+    <list default="true" id="5b50a1a9-6b26-4ef9-9cce-dc5897b02ae3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
