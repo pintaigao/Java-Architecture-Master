@@ -25,8 +25,6 @@
 
         <!-- mybatis批量别名配置 -->
         <property name="typeAliasesPackage" value="com.hptg.springdemo.po" />
-        <property name="mapperLocations" value="classpath:com/hptg/springdemo/mapper/*.xml"/>
-
         <!-- 注入mybatis的全局配置文件路径 (该部分可以被省略掉) -->
         <!-- <property name="configLocation" value="mybatis/SqlMapConfig.xml"></property> -->
     </bean>
