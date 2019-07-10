@@ -1,4 +1,4 @@
-package com.hptg.springmvc.po;
+package com.hptg.springmvc.pojo;
 
 import java.util.Date;
 

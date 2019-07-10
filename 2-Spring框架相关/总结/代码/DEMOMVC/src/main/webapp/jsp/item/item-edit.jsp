@@ -4,15 +4,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>修改商品信息</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>修改商品信息</title>
 
 </head>
-<body> 
+
+<body>
 	<!-- 上传图片是需要指定属性 enctype="multipart/form-data" -->
 	<!-- <form id="itemForm" action="" method="post" enctype="multipart/form-data"> -->
-	<form id="itemForm"	action="${pageContext.request.contextPath }/updateItem.do" method="post">
+	<form id="itemForm" action="${pageContext.request.contextPath }/updateItem.do" method="post">
 		<input type="hidden" name="id" value="${item.id }" /> 修改商品信息：
 		<table width="100%" border=1>
 			<tr>
