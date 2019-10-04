@@ -23,7 +23,7 @@
 	<!--注解映射器 @Controller和@RequestMapping组合这种方式的注解映射的解析 -->
 	<!-- <bean -->
 	<!-- class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" 
-		/> -->
+		/> -->  
 	<!--注解适配器 -->
 	<!-- <bean -->
 	<!-- class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" 

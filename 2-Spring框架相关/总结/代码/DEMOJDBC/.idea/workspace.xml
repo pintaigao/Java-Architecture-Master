@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66ebec17-49e9-4be9-8f46-c4ca220879d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/dao/AccountDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/dao/AccountDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/dao/AccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/dao/AccountDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/dao/DoubleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/dao/DoubleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/service/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/AccountServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/AccountServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/MyBeanMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/MyBeanMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/TestJdbcTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/TestJdbcTemplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/TestJdbcTemplate2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/spring-aop/target/classes/com/kkb/spring/test/TestJdbcTemplate2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/springmvc-demo/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/springmvc-demo/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/springmvc-demo/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.5讲义和代码/code/springmvc-demo/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-transfer-anno.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-transfer-anno.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-transfer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-transfer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/DEMOJDBC.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/MyBeanMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/MyBeanMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/TestJdbcTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/TestJdbcTemplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/TestJdbcTemplate2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hptg/springdemo/test/TestJdbcTemplate2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-transfer-anno.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-transfer-anno.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-transfer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-transfer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.8.8讲义和代码/code/springmvc-demo/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.8讲义和代码/code/springmvc-demo/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2018.8.8讲义和代码/code/springmvc-demo/src/main/webapp/WEB-INF/jsp/item/item-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2018.8.8讲义和代码/code/springmvc-demo/src/main/webapp/WEB-INF/jsp/item/item-edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMOMVC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMOMVC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMOMVC/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMOMVC/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEMOMVC/target/tomcat/logs/access_log.2019-07-10" beforeDir="false" afterPath="$PROJECT_DIR$/../DEMOMVC/target/tomcat/logs/access_log.2019-07-10" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,7 +20,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -117,104 +99,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hptg" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hptg" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="springdemo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hptg" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="springdemo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hptg" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="springdemo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hptg" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="springdemo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DEMO" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="DEMOJDBC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,9 +255,9 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="2560" height="986" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15448768" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1556791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />

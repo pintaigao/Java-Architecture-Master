@@ -14,8 +14,7 @@
     <!-- 配置前端控制器 -->
     <servlet>
         <servlet-name>springmvc</servlet-name>
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet
-        </servlet-class>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <!-- 设置spring配置文件路径 -->
         <!-- 如果不设置初始化参数，那么DispatcherServlet会读取默认路径下的配置文件 -->
         <!-- 默认配置文件路径：/WEB-INF/springmvc-servlet.xml -->
