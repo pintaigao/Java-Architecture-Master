@@ -15,7 +15,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.6</version>
+      <version>8.0.16</version>
     </dependency>
     <!--生成代码插件-->
     <!--和抖音后台用的是同一个mybatis逆向生成-->
